@@ -1,0 +1,13 @@
+{
+	"from": "payment_methods",
+	"columns": [
+		{ "data":"payment_methods.id", "action":"payment_method/show", "title":"ID" },
+		{ "data":"payment_methods.name", "title":"Name" },
+		{ "data":"payment_methods.code", "title":"Code" },
+		{ "data":"payment_methods.note", "title":"Note" },
+		{ "data":"payment_methods.status", "title":"Status" },
+		{ "data":"payment_methods.create_date", "title":"Create Date" },
+		{ "data":"payment_methods.timestamp", "title":"Modify Date" }
+	],
+	"join": []
+}

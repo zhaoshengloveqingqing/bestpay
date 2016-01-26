@@ -1,0 +1,9 @@
+(load-rules "/rules/security_base.rules")
+
+(defrule must-login-to-see-admin-home
+	(uri-segs $?segs)
+	(test (eq (nth$ 1 $?segs) "admin"))
+	(test (not (php_call "Pinet\\BestPay\\merchant_is_logged_in")))
+	=>
+	(reject-cause "require_login" "Must login to view admin pages")
+)

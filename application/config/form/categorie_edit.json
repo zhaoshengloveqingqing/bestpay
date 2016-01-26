@@ -1,0 +1,62 @@
+[
+	{
+		"field": "id",
+		"label": "ID",
+		"state": "readonly",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "parent_id",
+		"label": "Parent Category",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "name",
+		"label": "Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"64" },
+			"required"
+		]
+	},
+	{
+		"field": "type",
+		"label": "Type",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"64" },
+			"required"
+		]
+	},
+	{
+		"field": "status",
+		"label": "Status",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"16" },
+			"required"
+		]
+	},
+	{
+		"field": "create_date",
+		"label": "CreateDate",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "timestamp",
+		"label": "Timestamp",
+		"rules": [
+			{ "type":"timestamp" },
+			"required"
+		]
+	}
+]

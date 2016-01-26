@@ -1,0 +1,95 @@
+body{
+	#main-content {
+		padding: 0 !important;
+		width: 1180px;
+		margin: 0 auto;
+	}
+
+	.row{
+		margin: 0;
+	}
+
+	///form style
+	.clips-form {
+		width:90%;
+		margin: 0 auto;
+		.form-group.control-group {
+			margin-bottom: 0px;
+			label {
+				padding: 6px 0;
+				line-height: 28px;
+			}
+			.help-block {
+				ul{
+					list-style: none;
+					li {
+						padding-left: 152px;
+					}
+				}
+			}
+			.form-control {
+				box-shadow:none;
+				height:40px;
+				border:1px solid #dddddd;
+				border-radius: 3px;
+			}
+			div {
+				#field_sexSelectBoxItContainer {
+					height:40px;
+					width:100%;
+					#field_sexSelectBoxIt{
+						height:40px;
+						padding: 6px 0;
+						width:100% !important;
+					}
+				}
+			}
+		}
+
+		///button style
+		.submit{
+			padding-left: 15px;
+			.btn {
+				display: inline-block;
+				margin-top: 10px;
+				background-color:#444444;
+				border:none;
+				color: #ffffff;
+				padding:10px 20px;
+				border-radius:2px;
+				&:hover {
+					background-color:#777777;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+@mixin section_user_register($args...){
+	$screen-width: nth($args, 1);
+	$screen-alias: nth($args, 2);
+	@if $screen-width < 769 {
+		body {
+			overflow-x: hidden;
+			#main-content {
+				padding: 0;
+				.clips-form {
+					padding: 0 30px;
+					width: 100%;
+				}
+			}
+		}
+	}
+	@else if $screen-width > 768 and $screen-width < 1025 {
+		body {
+			#main-content {
+
+			}
+
+		}
+	}
+}

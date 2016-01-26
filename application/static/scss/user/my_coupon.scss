@@ -1,0 +1,228 @@
+#main-content {
+	@include center(1180px);
+	padding: 0 !important;
+	margin-top: 25px;
+	.breadcrumb {
+		padding: 0;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid #dddddd;
+		border-radius: 0;
+		li {
+			&.active {
+				color: #202121;
+				font-weight: 500;
+			}
+		}
+		a {
+			color: #2f2f2f;
+		}
+		> li + li:before {
+			color: #444444;
+			font-family: 'Glyphicons Halflings';
+			font-style: normal;
+			width: 18px;
+			height: 18px;
+			background: url(php_static_url("/application/static/img/user/icon2.png")) no-repeat;
+			content: "";
+			display: inline-block;
+			position: relative;
+			top:4px;
+		}
+	}
+	.left-meau {
+		width: 165px;
+		vertical-align: top;
+		display: inline-block;
+		margin-right: 14px;
+		ul.meau {
+			background-color: #f0f0f0;
+			padding-left: 0;
+			li {
+				list-style: none;
+				&.titles {
+					padding: 6px 0;
+					background-color: #e7e5e6;
+				}
+				span {
+					padding-left: 20px;
+					margin: 5px 0;
+					display: block;
+				}
+				.sub-meau {
+					padding-bottom: 10px;
+					padding-left: 0;
+					li {
+						padding-left: 35px;
+						padding-top: 8px;
+						padding-bottom: 8px;
+						a {
+							color: #505050;
+							font-size: 12px;
+							cursor: pointer;
+							width: 90px;
+						}
+						&.active {
+							background-color: #15af69;
+							a {
+								color: #ffffff;
+								&:after {
+									background: url(php_static_url("/application/static/img/user/icon3.png")) no-repeat;
+									content: "";
+									width: 10px;
+									height: 10px;
+									display: inline-block;
+									position: relative;
+									right:-8px;
+								}
+							}
+						}
+						&:hover {
+							background-color: #15af69;
+							a {
+								color: #ffffff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#coupon {
+		width: 996px;
+		display: inline-block;
+		#myTab {
+			border-bottom: none;
+			background-color: #eaeaea;
+			height: 41px;
+			li {
+				a {
+					padding-left: 20px;
+					cursor: pointer;
+					margin-right: 0;
+					padding-right: 20px;
+					height: 41px;
+					color: #444444;
+					border-radius: 0;
+					&.active,&:hover {
+						background-color: transparent;
+						border-radius: 0;
+					}
+				}
+				&.active,&:hover {
+					a {
+						border-radius: 0;
+						border-top: none;
+						border-right: none;
+						border-top: 3px #444444 solid;
+						&:hover {
+							border-bottom: 1px solid transparent;
+							height: 41px;
+							background-color: #ffffff;
+						}
+					}
+				}
+			}
+		}
+		.tab-content {
+			.row {
+				margin: 0;
+			}
+			#cash_coupon{
+				ul {
+					li {
+						background: url(php_static_url("/application/static/img/user/cash_coupon_bg.png")) no-repeat;
+						.shop-coupon {
+							p {
+								border-bottom: 1px solid #8b3265;
+							}
+						}
+					}
+				}
+			}
+			#discount_coupon {
+				ul {
+					li {
+						background: url(php_static_url("/application/static/img/user/discount_coupon_bg.png")) no-repeat;
+						.shop-coupon {
+							color: #ffffff;
+							text-align: center;
+							p {
+								color: #fbfa05;
+								font-size: 24px;
+								border-bottom: 1px solid #268193;
+								span {
+									color: #ffffff;
+								}
+							}
+						}
+					}
+				}
+			}
+			#general_coupon {
+				ul {
+					li {
+						background: url(php_static_url("/application/static/img/user/general_coupon_bg.png")) no-repeat;
+						.shop-coupon {
+							color: #ffffff;
+							text-align: center;
+							p {
+								color: #fbfa05;
+								font-size: 24px;
+								border-bottom: 1px solid #a35f01;
+								span {
+									color: #ffffff;
+								}
+							}
+						}
+					}
+				}
+			}
+			ul {
+				padding-left: 10px;
+				margin-top: 40px;
+				margin-bottom: 20px;
+				li {
+					width: 234px;
+					height: 170px;
+					margin-right: 10px;
+					margin-bottom: 20px;
+					display: inline-block;
+
+					list-style: none;
+					&:nth-child(4) {
+						margin-right: 0;
+					}
+					a{
+						cursor: pointer;
+						text-decoration: none;
+					}
+					.shop-coupon {
+						color: #ffffff;
+						text-align: center;
+						padding: 0 18px;
+						p {
+							color: #ffffff;
+							font-size: 24px;
+							span {
+								font-size: 60px;
+								margin-left: -28px;
+								margin-right: -20px;
+							}
+						}
+						.coupon--info {
+							text-align: left;
+							span {
+								font-size: 12px;
+								width: 198px;
+								display: block;
+								height: 19px;
+								overflow: hidden;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

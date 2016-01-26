@@ -1,0 +1,199 @@
+#main-content {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 !important;
+	margin:0 0 50px;
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.filter {
+		width: 68%;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+}
+
+.pinet-list-group {
+	margin: 0;
+	width: 100%;
+	display: table;
+	vertical-align: top;
+	& > &__title {
+		display: table-row;
+		width: 100%;
+	}
+	& > &__item {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+.listview_wrapper {
+	margin-bottom:30px;
+	border-bottom:1px solid #ebebeb;
+}
+.nav-stacked > li {
+	font-size: 16px;
+}
+.nav-pills > li > a {
+	color: #444444;
+}
+.nav-pills > li > a:hover,.nav-pills > li > a:active {
+	background-color: transparent;
+	color:  #337ab7
+}
+%pinet-card-child {
+	display: inline-table;
+	vertical-align: top;
+}
+.pinet-card {
+	& > &__media {
+		@extend %pinet-card-child;
+		img {
+			width: 120px;
+			display: inline-block;
+		}
+	}
+	& > &__body {
+		@extend %pinet-card-child;
+	}
+}
+#mycoupon {
+	.pinet-list-group__item--totalPrice,
+	.pinet-list-group__item--submit {
+//		width: 20%;
+		float: right;
+		text-align: center;
+		list-style: none;
+	}
+	.listview_title {
+		border-bottom: 1px solid #dddddd;
+		padding:12px 0;
+		font-size: 16px;
+	}
+	.list_info{
+		padding: 20px 0;
+		border-bottom: 1px solid #ebebeb;
+	}
+	.totalPrice {
+		padding: 30px 0;
+	}
+	.pinet-list-group {
+        display: table;
+		.pinet-list-group__item {
+			text-align: center;
+			h3 {
+				margin-top: 0;
+				font-size:16px;
+			}
+		}
+		.pinet-list-group__item--picture {
+			width: 20%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--info {
+			width: 30%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--number{
+			width: 20%;
+			text-align:center;
+			display: table-cell;
+			vertical-align: middle;
+			#tab{
+				min-width: 120px;
+				width: 48%;
+				margin: 0 auto;
+				.form-control {
+					text-align:center;
+				}
+				.input-group-addon {
+					cursor: pointer;
+				}
+				input[type=number] {
+					-moz-appearance: textfield;
+				}
+				input[type="number"]::-webkit-outer-spin-button,
+				input[type="number"]::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+				}
+			}
+		}
+		.pinet-list-group__item--price {
+			width: 10%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--totalprice {
+			width: 20%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	> .item {
+		width: 100%;
+		margin: 0;
+	}
+	.btn {
+		display: inline-block;
+		margin-top: 10px;
+		background-color:#444444;
+		border:none;
+		color: #ffffff;
+		padding:10px 20px;
+		border-radius:2px;
+		&:hover,&:active{
+			background-color:#777777;
+			color: #ffffff;
+		}
+	}
+}
+
+
+
+@mixin section_order_buy($args...){
+	$screen-width: nth($args, 1);
+	$screen-alias: nth($args, 2);
+	@if $screen-width < 769 {
+		body {
+			overflow: hidden;
+			#main-content {
+				.panel {
+					width: 100%;
+					padding: 0 30px;
+					.filter {
+						padding: 0;
+					}
+				}
+				.listview_wrapper {
+					.listview_filter {
+						input {
+							max-width: 160px;
+						}
+					}
+				}
+				#menu {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	@else if $screen-width > 768 and $screen-width < 1025 {
+		body {
+			#main-content {
+				.listview_wrapper {
+					.listview_filter {
+						input {
+							max-width: 140px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

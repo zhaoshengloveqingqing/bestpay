@@ -1,0 +1,4 @@
+The username is not exists!: Username "%s" is not exists!
+The username is inactive!: Username "%s" is inactive!
+ACTIVE: valid
+INACTIVE: invalid

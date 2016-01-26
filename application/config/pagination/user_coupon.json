@@ -1,0 +1,17 @@
+{
+	"from": "user_coupons",
+	"columns": [
+		{ "data":"user_coupons.id", "action":"user_coupon/show", "title":"ID" },
+		{ "data":"products.name", "title":"Coupon", "action":"product/show", "refer":"products.id" },
+		{ "data":"user_coupons.uid", "title":"Owner", "action":"user/show", "refer":"users.id" },
+		{ "data":"user_coupons.code", "title":"Code" },
+		{ "data":"user_coupons.status", "title":"Status" },
+		{ "data":"user_coupons.create_date", "title":"Create Date" },
+		{ "data":"user_coupons.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["products", {"user_coupons.product_id":"products.id"}]
+	,
+		["users", {"user_coupons.uid":"users.id"}]
+	]
+}

@@ -1,0 +1,69 @@
+[
+	{
+		"field": "uid",
+		"label": "Owner",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "name",
+		"label": "Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"200" },
+			"required"
+		]
+	},
+	{
+		"field": "order_number",
+		"label": "Serial",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"100" },
+			"required"
+		]
+	},
+	{
+		"field": "note",
+		"label": "Note",
+		"rules": [
+			{ "type":"text" },
+			"required"
+		]
+	},
+	{
+		"field": "status",
+		"label": "Status",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"16" },
+			"required"
+		]
+	},
+	{
+		"field": "payment_id",
+		"label": "Payment Mehtod",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "create_date",
+		"label": "Create Date",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "timestamp",
+		"label": "Modify Date",
+		"rules": [
+			{ "type":"timestamp" },
+			"required"
+		]
+	}
+]

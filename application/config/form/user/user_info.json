@@ -1,0 +1,42 @@
+[
+	{
+		"field": "username",
+		"label": "username"
+	},
+	{
+		"field": "sex",
+		"label": "sex"
+	},
+	{
+		"field": "year1",
+		"label": "brithday"
+	},
+	{
+		"field": "month1",
+		"label": ""
+	},
+	{
+		"field": "day1",
+		"label": ""
+	},
+	{
+		"field": "instruction",
+		"label": "Instruction"
+	},
+	{
+		"field": "uid",
+		"rules": [
+			{
+				"type": "hidden"
+			}
+		]
+	},
+	{
+		"field": "id",
+		"rules": [
+			{
+				"type": "hidden"
+			}
+		]
+	}
+]

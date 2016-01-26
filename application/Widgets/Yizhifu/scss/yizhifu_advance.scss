@@ -1,0 +1,118 @@
+@mixin init_yizhifu_advance() {
+	.pinet-table {
+		border: 1px solid #ebebeb;
+		> thead,
+		> tbody,
+		> tfoot {
+			> tr {
+				> th,
+				> td {
+					border-top: none;
+				}
+			}
+		}
+		> thead > tr > th {
+			color: #444444;
+			border-bottom: none;
+		}
+		> tbody > tr:nth-child(odd) {
+			background-color: rbga(250, 250, 250);
+		}
+	}
+
+	.pinet-menu {
+		li > a {
+			color: #444444;
+		}
+		li > a > i {
+			margin-left: 10px;
+		}
+	}
+
+	.pinet-breadcrumb {
+		background-color: transparent;
+		margin-bottom: 0;
+		> li {
+			color: #999999;
+		}
+
+		> li > a {
+			color: #999999;
+			&:hover,
+			&:focus {
+				color: #444444;
+			}
+		}
+
+		> li.active {
+			color: #444444;
+		}
+	}
+
+	.pinet-pagination {
+		> li {
+		    > a,
+			> span {
+				color: #999999;
+				border: none;
+			}
+		}
+
+
+		> li > a,
+		> li > span {
+			&:hover,
+			&:focus {
+				color: #444444;
+				background-color: transparent;
+			}
+		}
+
+		> .active > a,
+		> .active > span {
+			&,
+			&:hover,
+			&:focus {
+				color: #444444;
+				background-color: transparent;
+			}
+		}
+	}
+
+	.pinet-panel {
+		padding: 0;
+		box-shadow: none;
+	}
+
+	.pinet-panel .panel-header {
+		text-align: center;
+	}
+
+	.pinet-panel .panel-body {
+		padding: 0;
+		box-shadow: none;
+		border-bottom: 1px solid #ebebeb;
+	}
+
+	.pinet-panel .panel-footer {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: transparent;
+		box-shadow: none;
+		border-bottom: 1px solid #ebebeb;
+	}
+
+	.pinet-carousel {
+		.owl-item {
+			img {
+				width: 100%;
+			}
+		}
+	}	
+
+	.pinet-breadcrumb {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

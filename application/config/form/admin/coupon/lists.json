@@ -1,0 +1,30 @@
+[
+	{
+		"field": "group_purchase",
+		"label": "Group-buying"
+	},
+	{
+		"field": "branch_city",
+		"label": "City"
+	},
+	{
+		"field": "start_time",
+		"label": "Consumption time",
+		"rules":[
+			{"data-role":"date dategroup"},
+			{"data-date-options": "{ format: 'YYYY-MM-DD' }"},
+			{"data-date-control":"front"}
+		]
+	},
+	{
+		"field": "end_time",
+		"label": "~",
+		"placeholder": "Consumption time",
+		"rules":[
+			{"data-role":"date dategroup"},
+			{"data-date-options": "{ format: 'YYYY-MM-DD' }"},
+			{"data-for": "start_time"},
+			{"data-date-control":"end"}
+		]
+	}
+]

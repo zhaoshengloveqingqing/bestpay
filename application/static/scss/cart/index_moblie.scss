@@ -1,0 +1,24 @@
+.row{
+	margin: 0px;
+}
+.content{
+	padding: 174px 0px 93px;
+	text-align: center;
+	background: url(php_static_url("/application/static/img/cart/Bitmap.png")) no-repeat center 30px;
+	p{
+		width: 160px;
+		margin: auto;
+		text-align: left;
+		font-size: 16px;
+		color: #444;
+		line-height: 22px;
+		letter-spacing: 1px;
+		margin-top: 18px;
+	}
+	.btn{
+		@include green-btn();
+		&:hover,&:focus{
+			border: none;
+		}
+	}
+}

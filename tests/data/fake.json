@@ -1,0 +1,159 @@
+{
+	"%entity": {
+		"create_date": "!\\Clips\\now()"
+	},
+    "%user": {
+        "id": "@",
+        "status": "ACTIVE",
+        "create_date": "!\\Clips\\now()",
+        "$storage": true,
+        "$model": "user"
+    },
+    "admin_user": {
+        "id": "2000",
+        "status": "ACTIVE",
+        "create_date": "!\\Clips\\now()",
+        "$storage": true,
+        "$model": "user"
+    },
+	"%customer": {
+		"id": "@",
+		"uid": "@",
+		"name": "!\\Clips\\fake_name()->simple_name",
+		"$storage": true,
+		"$model": "customer"
+	},
+    "%merchant": {
+        "uid": "@",
+        "id": "@",
+        "longitude": 0,
+        "latitude": 0,
+        "$storage": true,
+        "$model": "merchant"
+    },
+    "admin_merchant": {
+        "uid": "2000",
+        "id": "2000",
+        "name": "!\\Clips\\fake_name()->simple_name",
+        "longitude": 0,
+        "latitude": 0,
+        "$storage": true,
+        "$model": "merchant"
+    },
+	"user*": {
+		"$template": "%user"
+	},
+	"customer*": {
+		"$template": "%customer"
+	},
+	"merchant*": {
+		"$count": 2,
+		"$template": "%merchant",
+		"name": "!\\Clips\\fake_name()->simple_name",
+		"logo_url": "no logo",
+		"location": "no location",
+		"description": "no description"
+	},
+	"category1": {
+		"id": 1,
+		"$template": "%entity",
+		"name": "产品",
+		"type": "products",
+		"$storage": true,
+		"$model": "category"
+	},
+	"coupon_category": {
+		"id": 2,
+		"$template": "%entity",
+		"name": "优惠券",
+		"parent_id": 1,
+		"type": "products",
+		"$storage": true,
+		"$model": "category"
+	},
+	"product*": {
+		"$count": "20",
+		"merchant_id": 1,
+		"category_id": 1,
+		"name": "Demo Product @",
+		"price": "!rand(100, 1000)",
+		"discount_price": "!rand(1, 100)",
+		"create_date": "!\\Clips\\now()",
+		"expire_date": "!\\Clips\\now(rand(5, 60).' days')",
+		"amount": "!rand(1, 100)",
+		"note": "Please buy!",
+		"$storage": true,
+		"$model": "product"
+	},
+    "coupon*": {
+        "$count": "20",
+        "merchant_id": 1,
+        "category_id": 2,
+        "name": "Demo Coupon @",
+        "price": "!rand(100, 1000)",
+        "discount_price": "!rand(1, 100)",
+        "create_date": "!\\Clips\\now()",
+        "expire_date": "!\\Clips\\now(rand(5, 60).' days')",
+        "amount": "!rand(1, 100)",
+        "note": "免责声明：以上所展示的信息由会员自行提供，内容的真实性、准确性和合法性由发布会员负责。 友情提醒：为规避购买风险，建议您在购买相关产品前务必确认供应商资质及产品质量。推荐使用翼支付担保交易，保障您的交易安全！",
+        "$storage": true,
+        "$model": "product"
+    },
+    "admin_coupon*": {
+        "$count": "20",
+        "merchant_id": 2000,
+        "category_id": 2,
+        "name": "Demo Coupon @",
+        "price": "!rand(100, 1000)",
+        "discount_price": "!rand(1, 100)",
+        "create_date": "!\\Clips\\now()",
+        "expire_date": "!\\Clips\\now(rand(5, 60).' days')",
+        "amount": "!rand(1, 100)",
+        "note": "免责声明：以上所展示的信息由会员自行提供，内容的真实性、准确性和合法性由发布会员负责。 友情提醒：为规避购买风险，建议您在购买相关产品前务必确认供应商资质及产品质量。推荐使用翼支付担保交易，保障您的交易安全！",
+        "$storage": true,
+        "$model": "product"
+    },
+	"product_photo*": {
+		"$count": "20",
+		"product_id": "@",
+		"path": "deli/home/cheese-1_large.jpeg",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+    "payment_method": {
+        "name": "翼支付",
+        "code": "bestpay",
+        "create_date": "!\\Clips\\now()",
+        "note": "选择翼支付，尽在你手！",
+        "$storage": true,
+        "$model": "paymentMethod"
+    },
+    "customer_product*": {
+        "$count": "!rand(100, 200)",
+        "cid": "!rand(1, 5)",
+        "product_id": "!rand(41, 60)",
+        "code": "!rand(100000000, 1000000000)",
+        "create_date": "!\\Clips\\now()",
+        "status":"!\\Clips\\choice(array('ACTIVE', 'USED'))",
+        "$storage": true,
+        "$model": "customerProduct"
+    },
+    "customer_product_two*": {
+        "$count": "!rand(100, 200)",
+        "cid": "!rand(1, 5)",
+        "product_id": "!rand(41, 60)",
+        "code": "!rand(100000000, 1000000000)",
+        "create_date": "!Clips\\now()",
+        "status":"!\\Clips\\choice(array('ACTIVE', 'USED'))",
+        "$storage": true,
+        "$model": "customerProduct"
+    },
+    "merchant_product*": {
+        "mid": "2000",
+        "product_id": "!rand(41, 60)",
+        "create_date": "!Clips\\now()",
+        "$storage": true,
+        "$model": "merchantProduct"
+    }
+}

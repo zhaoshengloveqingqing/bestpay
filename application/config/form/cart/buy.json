@@ -1,0 +1,55 @@
+[
+	{
+		"field": "id",
+		"label": "ID",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			},
+			"required"
+		]
+	},
+	{
+		"field": "amount",
+		"label": "Amount",
+		"defaultValue": 1,
+		"rules": [
+			{
+				"type": "number",
+				"min": 1
+			}
+		]
+	},
+	{
+		"field": "name",
+		"label": "Coupon_Name",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+	{
+		"field": "price",
+		"label": "Coupon_Price",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+	{
+		"field": "discount_price",
+		"label": "Discount Price",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			},
+			"required"
+		]
+	}
+]

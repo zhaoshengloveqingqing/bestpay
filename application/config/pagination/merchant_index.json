@@ -1,0 +1,14 @@
+{
+    "from": "users",
+    "columns": [
+        { "data": "users.id", "title" : "ID", "action":"merchant/show", "toggle": true},
+        { "data": "merchants.name", "title" : "Name"},
+        { "data": "merchants.description", "title" : "Description", "refer":"users.id", "action":"coupon_receive"},
+        { "data": "merchants.location", "title" : "Location"},
+        { "data": "merchants.create_date", "title" : "Create_Date"}
+    ],
+    "join": [
+        ["merchants", {"users.id": "merchants.uid"}]
+    ],
+    "pageLength" : 9
+}

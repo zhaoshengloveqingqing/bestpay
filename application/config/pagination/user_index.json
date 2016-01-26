@@ -1,0 +1,7 @@
+{
+    "from": "users",
+    "columns": [
+        { "data": "users.id", "title" : "User ID", "action":"user/show", "toggle": true},
+        { "data": "users.status", "title" : "Status"}
+    ]
+}

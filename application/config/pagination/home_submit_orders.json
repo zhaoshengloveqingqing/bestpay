@@ -1,0 +1,16 @@
+{
+	"from": "orders",
+	"columns": [
+		{ "data": "orders.id", "title" : "Order ID", "action":"coupon_buy", "toggle": true},
+		{ "data": "orders.name", "title" : "Name", "refer":"users.id", "action":"coupon_receive"},
+		{ "data": "orders.order_number", "title" : "Order_Number"},
+		{ "data": "orders.status", "title" : "Status"},
+		{ "data": "orders.note", "title" : "Note"},
+		{ "data": "orders.create_date", "title" : "Create_Date"}
+	],
+	"join": [
+		["order_items", {"order_items.order_id": "orders.id"}],
+		["users", {"users.id": "orders.uid"}]
+	],
+	"pageLength" : 9
+}

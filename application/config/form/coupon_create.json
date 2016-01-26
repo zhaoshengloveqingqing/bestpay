@@ -1,0 +1,10 @@
+[
+	{
+		"field": "product_id",
+		"label": "Product",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	}
+]

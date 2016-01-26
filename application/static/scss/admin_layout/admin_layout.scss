@@ -1,0 +1,209 @@
+#header {
+	margin: 0 auto !important;
+//	width: 1180px;
+	.navbar__brand {
+		float: left;
+		.responsive {
+			width: 436px !important;
+		}
+	}
+	.navbar__company {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		font-size: 24px;
+	}
+	.navbar {
+		@include center(1180px);
+		margin: 10px auto;
+	}
+	.top_navbar {
+		.top_navbar_right {
+			li {
+				margin-left: 25px;
+				&:first-child {
+					a:before {
+						background: url(php_static_url("/application/static/img/home_bg.png")) no-repeat;
+						content: "";
+						width: 14px;
+						height: 20px;
+						display: inline-block;
+						position: relative;
+						top:8px;
+					}
+				}
+				&:nth-child(2) {
+					a:before {
+						background: url(php_static_url("/application/static/img/setting_bg.png")) no-repeat;
+						content: "";
+						width: 14px;
+						height: 20px;
+						display: inline-block;
+						position: relative;
+						top:8px;
+					}
+				}
+			}
+		}
+	}
+}
+#menu {
+	margin-top: 18px !important;
+	.navbar {
+		@include center(1180px);
+//		margin: 10px auto;
+	}
+	.container-fluid {
+		float: left;
+	}
+	.navbar-collapse {
+		padding: 0;
+		.navbar-nav {
+			li {
+				a {
+					padding-bottom: 10px;
+					padding-top: 10px;
+				}
+			}
+			li:first-child {
+				padding-left: 0;
+				a {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.row {
+	margin: 0;
+}
+.copyright {
+	text-align: center;
+	line-height: 35px;
+	height: 35px;
+	background: #fafafa;
+	color: #444444;
+}
+.foot {
+	.content {
+//		line-height: 240px;
+		margin-top: 68px !important;
+	}
+	.foot_left {
+		ul {
+			li {
+				list-style: none;
+				.responsive {
+					width: 655px !important;
+					height: 105px !important;
+					img {
+						width: 655px;
+						height: 105px;
+					}
+				}
+			}
+		}
+	}
+	.foot_right {
+		float: right;
+		display: table;
+		width: 36% !important;
+		ul {
+			height: 105px;
+			vertical-align: middle;
+			display: table-cell;
+			li {
+				width: 33%;
+				float: right;
+			}
+		}
+	}
+}
+
+
+
+@media \0screen {
+	#header {
+		.top_navbar {
+			.top_navbar_right {
+				> li.management {
+					a:before {
+						background: url(php_static_url("/application/static/img/setting_bg.png")) no-repeat;
+						content: "";
+						width: 14px;
+						height: 20px;
+						display: inline-block;
+						position: relative;
+						top:8px;
+					}
+				}
+			}
+		}
+	}
+	#menu {
+		height: 58px;
+		display: block;
+
+		.container-fluid {
+			width: 1180px;
+			margin: 0 auto;
+			position: relative;
+			float:none;
+			.collapse {
+				height: 58px;
+				line-height: 58px;
+				width: 100%;
+				border: none;
+				display: table;
+			}
+			.nav {
+				height: 58px;
+				width: 100%;
+				margin-top: 0;
+				line-height: 58px;
+				display: block;
+				> li {
+					float: left;
+				}
+				li {
+					height: 58px;
+					line-height: 58px;
+					width:160px;
+					background: url(php_static_url("/application/static/img/nav_bg.png")) no-repeat right center;
+					text-align: center;
+					background-color: transparent;
+					a {
+						color: #ffffff;
+						height: 58px;
+						line-height: 58px;
+						font-size: 16px;
+						padding: 0;
+						width: 99%;
+						background-color: transparent;;
+						&:hover {
+							color:#ffffff;
+							background-color: #e3a326;
+						}
+					}
+					&.active{
+						background-color: transparent;
+						a {
+							color:#ffffff;
+							background-color: #e3a326;
+						}
+					}
+				}
+				li:first-child{
+					padding-left: 0;
+				}
+				li + li + li {
+					background: none;
+				}
+			}
+		}
+	}
+	.container {
+		margin-top: 40px !important;
+	}
+}

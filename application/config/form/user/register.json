@@ -1,0 +1,121 @@
+[
+    {
+        "field": "username",
+        "label": "Username",
+        "rules": [
+            {
+                "minlength": 1,
+                "maxlength": 32
+            },
+            "required"
+        ],
+	    "messages": {
+		    "required": "用户名为空"
+	    }
+    },
+	{
+		"field": "first_name",
+		"label": "First Name",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+	{
+		"field": "last_name",
+		"label": "Last Name",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+    {
+        "field": "password",
+        "label": "Password",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ],
+	    "messages": {
+		    "minlength": "密码不足6位"
+	    }
+
+    },
+	{
+		"field": "password_confirm",
+		"label": "Password Confirm",
+		"rules": [
+			{
+				"minlength": 6,
+				"maxlength": 32
+			},
+			"required"
+		],
+		"messages": {
+			"minlength": "密码不足6位"
+		}
+
+	},
+    {
+        "field": "mobile",
+        "label": "Mobile",
+        "rules": [
+            {
+                "minlength": 11,
+                "maxlength": 11
+            },
+            "required"
+        ],
+	    "messages":{
+		    "minlength":"手机号不足11位"
+	    }
+    },
+    {
+        "field": "sex",
+        "label": "Sex",
+        "rules": ["required"]
+    },
+    {
+        "field": "email",
+        "label": "Email",
+        "rules": [
+          {
+            "type": "email"
+          },
+          "required"
+        ],
+	    "messages":{
+		    "email":"电子邮件格式不正确"
+	    }
+    },
+    {
+        "field": "delivery_address",
+        "label": "Delivery Address",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ],
+	    "messages":{
+		    "required": "收货地址为空",
+		    "minlength":"收货地址不足6位"
+	    }
+    },
+    {
+        "field": "uid",
+        "rules": [
+            {
+                "type": "hidden"
+            }
+        ]
+    }
+]

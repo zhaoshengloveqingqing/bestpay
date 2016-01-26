@@ -1,0 +1,87 @@
+Merchant Login: 商家登录
+Merchant Login Page: 商家登录
+Username: 账号
+Password: 密码
+The username is not exists!: 账号"%s"不存在!
+The password is wrong!: 密码错误!
+The username is inactive!: 账号"%s"不可用!
+Check Coupon: 验券
+Check Coupon Page: 验券页面
+Customers Management: 订单管理
+My Shop: 我的店铺
+Coupon Voucher Status: 券状态查询
+Coupon Voucher Status Page: 券状态查询页面
+Checked Coupon Record: 验券记录
+Checked Coupon Record Page: 验券记录页面
+Checked Coupon Record Detail Page: 验券记录详细页面
+Please select a branch: 请选择分店
+Please enter the code of coupon voucher: 请输入团购优惠券验证码
+Validate: 验证
+City: 城市
+Group-buying: 团购
+Consumption time: 消费时间
+Clean: 清除时间
+Yesterday: 昨天
+Latest 7 days: 最近7天
+Latest 30 days: 最近30天
+ACTIVE: 有效
+USED: 已消费
+INACTIVE: 无效
+Expired date: 过期时间
+This code is invalid!: 当前验证码无效!
+This code is invalid!: 当前验证码无效!
+-- All --: -- 全部 --
+Product Name: 商品名称
+Amount: 数量
+Coupon Name: 优惠券名称
+Code: 验证码
+Price: 价格
+Login: 登录
+Validate code successfully!: 验证码使用成功!
+Username: 账号
+Merchant Register: 商家注册
+Password Confirm: 确认密码
+Merchant List: 商家列表
+Register: 注册
+Cart: 购物车
+Effective Date: 有效期
+Cart: 购物车
+Search: 搜索
+Account: 账号
+Home: 首页
+Coupon: 优惠券
+Mall: 惠生活
+Card Coupon: 券生活
+Coupon Page: 券生活
+Car: 车生活
+People: 宅生活
+Help: 帮助
+Group purchase: 团购
+Shopping: 购物
+Hydropower Payment: 水电缴费
+Convenience services: 便民服务
+Sign Out: 登出
+Discount Price: 折扣价
+Inventory: 库存
+Show: 显示条数
+entries: 条目
+Create Date: 创建时间
+ASC: 升序
+DESC: 降序
+Category: 分类
+Brand: 品牌
+All: 全部
+Category: 分类
+Brand: 品牌
+Breed: 品种
+My Bestpay: 我的翼百
+Welcome to yibai: 您好，欢迎来到翼百网!
+Know Bestpay: 认识翼支付
+Business Center: 商户中心
+Contact Us: 联系我们
+My order: 我的订单
+Delivery Address: 收货地址
+My Coupon: 我的优惠券
+Buy Now: 立即购买
+Checked Coupon Status Page: 验券状态查询
+Select branch: 选择分店

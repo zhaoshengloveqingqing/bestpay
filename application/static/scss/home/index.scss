@@ -1,0 +1,724 @@
+/// @author lmjean
+/// @Todo need write some commnent
+
+body {
+	@include set-margin-and-padding();
+	overflow-x: hidden;
+
+	#main-content {
+		padding: 0 !important;
+		@include center(1180px);
+	}
+
+	/// reset panel footer
+	%reset-panel-footer {
+		height: 0;
+		@include set-margin-and-padding();
+		border: none;
+	}
+
+
+
+	@mixin set-home-index-page-section-padding($padding) {
+		padding: $padding;
+	}
+
+	/// coupon-list-style
+	@mixin coupon-list(){
+		.panel {
+			border: 0;
+			box-shadow: none;
+			background: transparent;
+		}
+		.panel-header {
+			h2 {
+				color:#444444;
+				font-size: 16px;
+				display: inline-block;
+				text-align: left;
+				padding-bottom: 10px;
+				margin-bottom: 0;
+				padding-left: 10px;
+				margin-top: 10px;
+			}
+			a {
+				float: right;
+				margin-top: 30px;
+				color: #444444;
+				&:hover {
+					color: #1fc95c;
+				}
+			}
+			div.color {
+				border-bottom: 2px solid #16b874;
+				height: 2px;
+				position: relative;
+				top: 2px;
+				width: 80px;
+			}
+			hr{
+				border-bottom: 2px solid #dddddd;
+				border-top: none;
+				margin: 0;
+
+			}
+		}
+		.panel-body {
+			clear: both;
+			padding: 0;
+			border-bottom: none;
+			.column_banner{
+				width: 579px;
+				height: 485px;
+				padding: 8px;
+				border: 1px solid #cccccc;
+				float: left;
+				.owl-pagination {
+					position: absolute;
+					bottom: 5px;
+					left:50%;
+				}
+			}
+
+			li {
+				list-style: none;
+
+			}
+
+		}
+	}
+
+
+	/// coupon list content
+	@mixin coupon_list_content() {
+		.panel {
+			position: relative;
+			background: transparent;
+			margin-top: 10px;
+			.panel-header {
+				margin-bottom: 10px;
+				h2 {
+					color:#444444;
+					font-size: 16px;
+					text-align: left;
+					margin-bottom: 0;
+					margin-top: 10px;
+					img {
+						margin-right: 10px;
+					}
+					span {
+						padding-left: 10px;
+					}
+				}
+				a {
+					position: absolute;
+					right: 0;
+					top: 10px;
+					margin: 0;
+					color: #444444;
+					&:hover {
+						color: #1fc95c;
+					}
+				}
+				.color {
+					border-bottom: 2px solid #16b874;
+					height: 2px;
+					position: relative;
+					top: 2px;
+					width: 400px;
+				}
+				hr{
+					border-bottom: 2px solid #dddddd;
+					border-top: none;
+					margin: 0;
+
+				}
+			}
+		}
+
+		///panel-body
+		.panel-body {
+			border-bottom: none;
+			.scroll {
+				padding: 8px;
+				border: 1px solid #dddddd;
+				height: 500px;
+				img {
+					height: 482px;
+					width: 571px;
+				}
+				.list_product [u="navigator"] {
+					position: absolute;left:48%;
+					bottom:10px;
+				}
+				.list_product [u="navigator"] div {
+					position: absolute;
+					width: 11px;
+					height: 11px;
+					overflow: hidden;
+					cursor: pointer;
+					border-radius: 50%;
+					background: #969696;
+					&.av {
+						background: #d0d0d0;
+					}
+				}
+			}
+			.product {
+				padding: 0;
+				height: 100%;
+				ul {
+					list-style: none;
+					width: 100%;
+					padding-left: 0;
+				}
+				li {
+					float: left;
+					padding: 8px;
+					border-right:1px solid #dddddd;
+					.product-thumbnail {
+						box-shadow: none;
+						background: transparent;
+						border-radius: 0;
+						border: none;
+						position: relative;
+						margin-bottom: 0;
+						padding: 0;
+						.link {
+							.responsive {
+								transition: all 0.3s ease-out 0s;
+								padding-top: 6px;
+							}
+							&:hover {
+								.responsive {
+									margin: -6px auto 6px;
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#banner {
+		margin-top: 0 !important;
+		.pinet-full-slider [u="navigator"] div {
+			position: absolute;
+			width: 11px;
+			height: 11px;
+			overflow: hidden;
+			cursor: pointer;
+			border-radius: 50%;
+			background: #969696;
+			&.av {
+				background: #d0d0d0;
+			}
+		}
+	}
+	///coupon list 0
+	#coupon-list-0 {
+		@include coupon-list();
+		margin: 0;
+		margin-top: 30px;
+		.column {
+			padding-left: 0;
+			padding-right: 12.5px;
+			.panel {
+				img {
+					width: 380px;
+				}
+			}
+			.new_product [u="navigator"] div {
+				position: absolute;
+				width: 11px;
+				height: 11px;
+				overflow: hidden;
+				cursor: pointer;
+				border-radius: 50%;
+				background: #969696;
+				&.av {
+					background: #d0d0d0;
+				}
+			}
+		}
+		.column + .column{
+
+			padding-right: 5px;
+			padding-left: 5px;
+			.link {
+				img {
+					transition: all 0.3s ease-out 0s;
+					padding-top: 10px;
+				}
+				&:hover {
+					img {
+						margin: -5px auto 5px;
+					}
+
+				}
+			}
+		}
+		.column + .column + .column{
+			padding-left: 12.5px;
+			padding-right: 0;
+			.panel-body {
+				width: 371px;
+				.service {
+					li{
+						width: 169px;
+						float: left;
+						height: 115px;
+						text-align: center;
+						border-right: none;
+						margin-top: 2px;
+						cursor: pointer;
+						a {
+							margin: 0px 40px;
+							cursor: pointer;
+							.responsive{
+								margin: 0;
+								text-align: center;
+								img {
+									height: 95px;
+									width: 85px;
+								}
+							}
+						}
+					}
+					li {
+						background: url(php_static_url('/application/static/img/home_jiazheng.png'))no-repeat center center;
+					}
+					li + li {
+						background: url(php_static_url('/application/static/img/home_jiazhuang.png'))no-repeat center center;
+					}
+					li + li + li {
+						background: url(php_static_url('/application/static/img/home_jiadian.png'))no-repeat center center;
+					}
+					li + li + li + li {
+						background: url(php_static_url('/application/static/img/home_banjia.png'))no-repeat center center;
+					}
+					li + li + li + li + li {
+						background: url(php_static_url('/application/static/img/home_baojie.png'))no-repeat center center;
+					}
+					li + li + li + li + li +li {
+						background: url(php_static_url('/application/static/img/home_kaisuo.png'))no-repeat center center;
+					}
+					li:hover{
+						background: url(php_static_url('/application/static/img/home_jiazheng_icon.png'))no-repeat center center;
+					}
+					li + li:hover{
+						background: url(php_static_url('/application/static/img/home_jiazhuang_icon.png'))no-repeat center center;
+					}
+					li + li + li:hover{
+						background: url(php_static_url('/application/static/img/home_jiadian_icon.png'))no-repeat center center;
+					}
+					li + li + li + li:hover{
+						background: url(php_static_url('/application/static/img/home_banjia_icon.png'))no-repeat center center;
+					}
+					li + li + li + li + li:hover{
+						background: url(php_static_url('/application/static/img/home_baojie_icon.png'))no-repeat center center;
+					}
+					li + li + li + li + li +li:hover{
+						background: url(php_static_url('/application/static/img/home_kaisuo_icon.png'))no-repeat center center;
+					}
+					$animal-list: jiazheng,jiazhuang,jiadian,banjia, baojie, kaisuo;
+					@for $i from 1 through length($animal-list) {
+						li:nth-child(#{$i}) {
+							background: url(php_static_url('/application/static/img/home_#{nth($animal-list, $i)}.png'))no-repeat center center;
+						}
+					}
+					@for $i from 1 through length($animal-list) {
+						li:nth-child(#{$i}):hover {
+							background: url(php_static_url('/application/static/img/home_#{nth($animal-list, $i)}_icon.png'))no-repeat center center;
+						}
+					}
+				}
+			}
+		}
+		.panel {
+			background-color: transparent;
+			margin-bottom: 0;
+			.panel-header {
+				position: relative;
+				a {
+					position: absolute;
+					right: 0;
+					top:10px;
+					float: none;
+					margin-top: 0;
+				}
+			}
+			.panel-body {
+				margin-top: 10px;
+				border-bottom: none;
+				height: 360px;
+				width: 376px;
+				.responsive {
+					img {
+						height: 360px;
+					}
+				}
+				ul{
+					padding: 0 15px;
+					height: 360px;
+					margin-bottom: 0;
+					li {
+						width: 173px;
+						float: left;
+						height: 180px;
+						text-align: center;
+						padding: 0;
+						border: none;
+						.type {
+							background-color: #bb0052;
+							padding: 5px;
+							margin-top: 10px;
+							color: #ffffff;
+							font-size: 14px;
+							width: 45px;
+							font-style: normal;
+							height: 28px;
+							text-align: center;
+							display: inline-block;
+						}
+						.link {
+							.responsive {
+								margin-top: 10px;
+								margin-bottom: 10px;
+								height: 80px;
+								width: 160px;
+								img {
+									height: 80px;
+									width: 160px;
+								}
+							}
+							p{
+								height: 40px;
+								width: 160px;
+								text-align: center;
+							}
+						}
+						.title {
+							width: 160px;
+							height: 21px;
+							line-height: 21px;
+							font-size: 14px;
+							overflow: hidden;
+							display: block;
+							text-align: center;
+						}
+						.price {
+							width: 160px;
+							height: 22px;
+							line-height: 22px;
+							font-size: 14px;
+							overflow: hidden;
+							display: block;
+							color: #ff0000;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+
+		.pinet-panel {
+			.panel-body {
+				width: 180px;
+				padding: 0 10px;
+				height: 190px;
+				margin-top: 10px;
+				float: left;
+				text-align: center;
+				border-bottom: none;
+				&:hover {
+					box-shadow: 0 0 4px 4px #ebebeb;
+				}
+			}
+
+		}
+	}
+
+	/// coupon list 1
+	#coupon-list-1 {
+		@include center(1180px);
+		@include coupon_list_content();
+		.panel-body {
+			.product {
+				li{
+					width: 50%;
+					height: 250px;
+					text-align:center;
+					.product-thumbnail {
+
+						img {
+							width: 277px;
+							height: 200px;
+						}
+						.caption {
+							padding: 0px;
+						}
+						.caption > a {
+							font-size: 14px;
+							color: #444444;
+							overflow: hidden;
+							text-align: left;
+
+							&:hover {
+								color: #16b874;
+							}
+							.title {
+								float: left;
+								width: 200px;
+								height: 22px;
+								line-height: 22px;
+								overflow: hidden;
+							}
+						}
+
+						.price {
+							float: right;
+							color: #ff0000;
+						}
+					}
+				}
+				li:first-child {
+					border-right:1px solid #dddddd;
+					border-bottom:1px solid #dddddd;
+				}
+				li + li {
+					border-right:none;
+					border-bottom:1px solid #dddddd;
+				}
+				li + li + li {
+					border-right:1px solid #dddddd;
+					border-bottom:none;
+				}
+				li:nth-child(2) {
+					border-right:none;
+					border-bottom:1px solid #dddddd;
+				}
+				li + li + li + li {
+					border-right:none;
+				}
+				li:last-child {
+					border-right:none;
+				}
+			}
+		}
+	}
+
+	/// coupon list 2
+	#coupon-list-2 {
+		@include center(1180px);
+		@include coupon_list_content();
+		.panel-body {
+			.product {
+				li {
+					width:33.3%;
+					height: 250px;
+					.product-thumbnail {
+						img {
+							width:179px;
+							height: 180px;
+						}
+						.caption {
+							font-size: 14px;
+							color: #444444;
+							margin-top: 10px;
+							overflow: hidden;
+							text-align: center;
+							padding: 0;
+							.title {
+								float: left;
+								width: 180px;
+								color: #444444;
+								height: 20px;
+								overflow: hidden;
+								&:hover {
+									color: #16b874;
+								}
+							}
+							.price {
+								text-align: center;
+								color: #ff0000;
+								height: 20px;
+							}
+						}
+					}
+				}
+				li:first-child {
+					border-right:1px solid #dddddd;
+					border-bottom:1px solid #dddddd;
+				}
+				li + li {
+					border-bottom:1px solid #dddddd;
+				}
+				li:nth-child(2) {
+					border-bottom:1px solid #dddddd;
+				}
+				li + li + li {
+					border-bottom:1px solid #dddddd;
+					border-right:none;
+				}
+				li + li + li + li {
+					border-right:1px solid #dddddd;
+					border-bottom:none;
+				}
+				li + li + li + li + li {
+					border-right:1px solid #dddddd;
+					border-bottom:none;
+				}
+				li:nth-child(3) {
+					border-bottom:1px solid #dddddd;
+					border-right:none;
+				}
+				li + li + li + li + li + li {
+					border-right:none;
+				}
+				li:last-child {
+					border-right:none;
+					border-left:none;
+				}
+			}
+		}
+	}
+
+
+
+
+	/// coupon list 4
+	#coupon-list-4 {
+		@include center(1180px);
+		@include coupon_list_content();
+		.panel-body {
+			.product {
+				padding: 45px 50px;
+				ul {
+					height: 400px;
+				}
+				li{
+					width: 25%;
+					text-align: center;
+					border: none;
+					height: 200px;
+					cursor: pointer;
+					line-height: 200px;
+					a {
+						cursor: pointer;
+
+						img {
+							width: 90px;
+							height: 115px;
+						}
+					}
+				}
+				li {
+					background: url(php_static_url('/application/static/img/home_jiazheng.png'))no-repeat center center;
+				}
+				li + li {
+					background: url(php_static_url('/application/static/img/home_jiazhuang.png'))no-repeat center center;
+				}
+				li + li + li {
+					background: url(php_static_url('/application/static/img/home_jiadian.png'))no-repeat center center;
+				}
+				li + li + li + li {
+					background: url(php_static_url('/application/static/img/home_banjia.png'))no-repeat center center;
+				}
+				li + li + li + li + li {
+					background: url(php_static_url('/application/static/img/home_baojie.png'))no-repeat center center;
+				}
+				li + li + li + li + li + li {
+					background: url(php_static_url('/application/static/img/home_kaisuo.png'))no-repeat center center;
+				}
+				li + li + li + li + li + li + li {
+					background: url(php_static_url('/application/static/img/home_shutong.png'))no-repeat center center;
+				}
+				li + li + li + li + li + li + li + li{
+					background: url(php_static_url('/application/static/img/home_kuaidi.png'))no-repeat center center;
+				}
+				li:hover{
+					background: url(php_static_url('/application/static/img/home_jiazheng_icon.png'))no-repeat center center;
+				}
+				li + li:hover{
+					background: url(php_static_url('/application/static/img/home_jiazhuang_icon.png'))no-repeat center center;
+				}
+				li + li + li:hover{
+					background: url(php_static_url('/application/static/img/home_jiadian_icon.png'))no-repeat center center;
+				}
+				li + li + li + li:hover{
+					background: url(php_static_url('/application/static/img/home_banjia_icon.png'))no-repeat center center;
+				}
+				li + li + li + li + li:hover{
+					background: url(php_static_url('/application/static/img/home_baojie_icon.png'))no-repeat center center;
+				}
+				li + li + li + li + li +li:hover{
+					background: url(php_static_url('/application/static/img/home_kaisuo_icon.png'))no-repeat center center;
+				}
+				li + li + li + li + li + li + li:hover {
+					background: url(php_static_url('/application/static/img/home_shutong_icon.png'))no-repeat center center;
+				}
+				li + li + li + li + li + li + li + li:hover {
+					background: url(php_static_url('/application/static/img/home_kuaidi_icon.png'))no-repeat center center;
+				}
+				$animal-list: jiazheng,jiazhuang,jiadian,banjia, baojie, kaisuo, shutong,kuaidi;
+				@for $i from 1 through length($animal-list) {
+					li:nth-child(#{$i}) {
+						background: url(php_static_url('/application/static/img/home_#{nth($animal-list, $i)}.png'))no-repeat center center;
+					}
+				}
+				@for $i from 1 through length($animal-list) {
+					li:nth-child(#{$i}):hover {
+						background: url(php_static_url('/application/static/img/home_#{nth($animal-list, $i)}_icon.png'))no-repeat center center;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@mixin section_home_index($args...) {
+	$screen-width: nth($args, 1) !global;
+	$screen-alias: nth($args, 2) !global;
+	h3 {
+		echo: res(1200px);
+	}
+}
+
+.pinet-full-slider {
+	@include slider(1920px, 500px);
+}
+
+.new_product {
+	@include slider(380px, 360px);
+}
+.list_product {
+	@include slider(571px, 482px);
+}
+
+.new_product [u="navigator"] {
+	@include slider-navigatior(){
+		bottom: 16px;
+		right:-7;
+
+		div {
+			position: absolute;
+			width: 11px;
+			height: 11px;
+			overflow: hidden;
+			cursor: pointer;
+			border-radius: 50%;
+			background: #969696;
+		}
+		.av {
+				background: #d0d0d0;
+		}
+	};
+}
+
+
+
+@media \0screen {
+}

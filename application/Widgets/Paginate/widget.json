@@ -1,0 +1,17 @@
+{
+	"author": "lmjean",
+	"date": "Fri May 29 12:58:06 2015",
+	"version": "1.0",
+	"name": "paginate",
+	"doc":"paginate",
+	"css": {
+		"files": [
+			"style"
+		]
+	},
+	"js": {
+		"files": [
+			"jquery.paginate"
+		]
+	}
+}

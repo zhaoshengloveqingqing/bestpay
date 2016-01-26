@@ -1,0 +1,13 @@
+{
+	"from": "categories",
+	"columns": [
+		{ "data":"categories.id", "action":"categorie/show", "title":"ID" },
+		{ "data":"categories.parent_id", "title":"Parent Category" },
+		{ "data":"categories.name", "title":"Name" },
+		{ "data":"categories.type", "title":"Type" },
+		{ "data":"categories.status", "title":"Status" },
+		{ "data":"categories.create_date", "title":"Categorie CreateDate" },
+		{ "data":"categories.timestamp", "title":"Categorie Timestamp" }
+	],
+	"join": []
+}

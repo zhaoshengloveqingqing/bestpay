@@ -1,0 +1,10 @@
+{
+	"from": "coupons",
+	"columns": [
+		{ "data":"coupons.id", "action":"coupon/show", "title":"ID" },
+		{ "data":"products.name", "title":"Product", "action":"product/show", "refer":"products.id" }
+	],
+	"join": [
+		["products", {"coupons.product_id":"products.id"}]
+	]
+}

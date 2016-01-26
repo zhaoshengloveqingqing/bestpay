@@ -1,0 +1,58 @@
+[
+	{
+		"field": "order_id",
+		"label": "Order",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "uid",
+		"label": "Owner",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "product_id",
+		"label": "Product",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "amount",
+		"label": "Amount",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "price",
+		"label": "Price",
+		"rules": [
+			{ "type":"decimal" },
+			"required"
+		]
+	},
+	{
+		"field": "create_date",
+		"label": "Create Date",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "timestamp",
+		"label": "Modify Date",
+		"rules": [
+			{ "type":"timestamp" },
+			"required"
+		]
+	}
+]

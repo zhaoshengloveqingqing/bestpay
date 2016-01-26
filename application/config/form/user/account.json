@@ -1,0 +1,21 @@
+[
+	{
+		"field": "mobile",
+		"label": "Mobile"
+	},
+	{
+		"field": "validation",
+		"label": ""
+	},
+	{
+		"field": "email",
+		"label": "Email"
+	},{
+	"field": "id",
+	"rules": [
+		{
+			"type": "hidden"
+		}
+	]
+}
+]

@@ -1,0 +1,317 @@
+{
+	"product_photo21": {
+		"product_id": 21,
+		"path": "coupon.png",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+	"product_photo22": {
+		"product_id": 22,
+		"path": "coupon.png",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+	"product_photo23": {
+		"product_id": 23,
+		"path": "coupon.png",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+	"product_photo24": {
+		"product_id": 24,
+		"path": "coupon.png",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+	"product_photo25": {
+		"product_id": 25,
+		"path": "coupon.png",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+	"product_photo26": {
+		"product_id": 26,
+		"path": "coupon.png",
+		"is_primary": 1,
+		"$storage": true,
+		"$model": "productPhoto"
+	},
+    "product11": {
+        "id": 501,
+        "merchant_id": 1,
+        "category_id": 1,
+        "name": "古井贡酒 60年窖龄酒45度500ml 白酒",
+        "price": "!rand(100, 1000)",
+        "discount_price": "!rand(1, 100)",
+        "create_date": "!\\Clips\\now()",
+        "expire_date": "!\\Clips\\now(rand(5, 60).' days')",
+        "amount": "!rand(1, 100)",
+        "note": "Please buy!",
+        "$storage": true,
+        "$model": "product"
+    },
+    "productphoto11": {
+        "product_id": 501,
+        "is_primary": 1,
+        "path": "lvyinge/goodlifeleft.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "productphoto21": {
+        "product_id": 501,
+        "is_primary": 0,
+        "path": "lvyinge/goodlife.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "productphoto31": {
+        "product_id": 501,
+        "is_primary": 0,
+        "path": "lvyinge/goodlife.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_tag11": {
+        "product_id": 501,
+        "tag_id": 1,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tag21": {
+        "product_id": 501,
+        "tag_id": 6,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tag31": {
+        "product_id": 501,
+        "tag_id": 12,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product111": {
+        "id": 502,
+        "merchant_id": 1,
+        "category_id": 1,
+        "name": "光明莫斯利安钻石装酸牛奶200g12包提",
+        "price": "!rand(100, 1000)",
+        "discount_price": "!rand(1, 100)",
+        "create_date": "!\\Clips\\now()",
+        "expire_date": "!\\Clips\\now(rand(5, 60).' days')",
+        "amount": "!rand(1, 100)",
+        "note": "Please buy!",
+        "$storage": true,
+        "$model": "product"
+    },
+    "productphoto111": {
+        "product_id": 502,
+        "is_primary": 1,
+        "path": "lvyinge/goodlifeleft.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "productphoto211": {
+        "product_id": 502,
+        "is_primary": 0,
+        "path": "lvyinge/goodlife.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "productphoto311": {
+        "product_id": 502,
+        "is_primary": 0,
+        "path": "lvyinge/goodlife.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_tag111": {
+        "product_id": 502,
+        "tag_id": 1,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tag211": {
+        "product_id": 502,
+        "tag_id": 11,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tag311": {
+        "product_id": 502,
+        "tag_id": 14,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product1111": {
+        "id": 503,
+        "merchant_id": 1,
+        "category_id": 1,
+        "name": "光明莫斯利安钻石装酸牛奶200g12包提",
+        "price": "!rand(100, 1000)",
+        "discount_price": "!rand(1, 100)",
+        "create_date": "!\\Clips\\now()",
+        "expire_date": "!\\Clips\\now(rand(5, 60).' days')",
+        "amount": "!rand(1, 100)",
+        "note": "Please buy!",
+        "$storage": true,
+        "$model": "product"
+    },
+    "productphoto1111": {
+        "product_id": 503,
+        "is_primary": 1,
+        "path": "lvyinge/goodlifeleft.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "productphoto2111": {
+        "product_id": 503,
+        "is_primary": 0,
+        "path": "lvyinge/goodlife.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "productphoto3111": {
+        "product_id": 503,
+        "is_primary": 0,
+        "path": "lvyinge/goodlife.png",
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_tag1111": {
+        "product_id": 503,
+        "tag_id": 1,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tag2111": {
+        "product_id": 503,
+        "tag_id": 11,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tag3111": {
+        "product_id": 503,
+        "tag_id": 15,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_photo41": {
+        "product_id": 41,
+        "path": "coupon.png",
+        "is_primary": 1,
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_photo42": {
+        "product_id": 42,
+        "path": "coupon.png",
+        "is_primary": 1,
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_photo43": {
+        "product_id": 43,
+        "path": "coupon.png",
+        "is_primary": 1,
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_photo44": {
+        "product_id": 44,
+        "path": "coupon.png",
+        "is_primary": 1,
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_photo45": {
+        "product_id": 45,
+        "path": "coupon.png",
+        "is_primary": 1,
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_photo46": {
+        "product_id": 46,
+        "path": "coupon.png",
+        "is_primary": 1,
+        "$storage": true,
+        "$model": "productPhoto"
+    },
+    "product_tagcp1": {
+        "product_id": 21,
+        "tag_id": 2,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp2": {
+        "product_id": 22,
+        "tag_id": 16,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp11": {
+        "product_id": 21,
+        "tag_id": 2,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp22": {
+        "product_id": 22,
+        "tag_id": 16,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp111": {
+        "product_id": 21,
+        "tag_id": 2,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp222": {
+        "product_id": 22,
+        "tag_id": 16,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp1111": {
+        "product_id": 21,
+        "tag_id": 2,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp2222": {
+        "product_id": 22,
+        "tag_id": 16,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp11111": {
+        "product_id": 21,
+        "tag_id": 2,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp22222": {
+        "product_id": 22,
+        "tag_id": 16,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp111111": {
+        "product_id": 21,
+        "tag_id": 2,
+        "$storage": true,
+        "$model": "productTag"
+    },
+    "product_tagcp222222": {
+        "product_id": 22,
+        "tag_id": 16,
+        "$storage": true,
+        "$model": "productTag"
+    }
+}

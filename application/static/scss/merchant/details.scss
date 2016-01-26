@@ -1,0 +1,208 @@
+#main-content {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin:0 0 50px;
+	.row {
+		margin:5px 0;
+		span.column {
+			color:#777777;
+			display: inline-block;
+			width: 120px;
+			strong {
+				color:#444444;
+			}
+		}
+	}
+	#menu {
+		margin-bottom: 20px;
+		margin: 0;
+	}
+	.list {
+		width: 68%;
+		margin: 0 auto;
+	}
+}
+.listview_wrapper {
+	.listview {
+		.listview_item {
+			width: 33.3%;
+			margin: 0;
+		}
+		.product-thumbnail {
+			.caption {
+				padding: 0;
+				h3 {
+					margin: 0;
+				}
+				.title {
+					font-size: 14px;
+					padding: 5px;
+					word-break: break-all;
+					word-wrap: break-word;
+					height: 50px;
+					overflow-y: hidden;
+				}
+			}
+		}
+	}
+}
+.merchant-details {
+	.thumbnail__link {
+		padding-left: 0;
+	}
+	.merchant-info {
+		>.row{
+			padding: 6px 0;
+			label {
+				padding-left:0px;
+				line-height: 32px;
+				color:#777777;
+				margin:0px;
+				width: 90px;
+			}
+		}
+	}
+}
+.panel-body {
+	border-bottom: none;
+	font-size: 14px;
+	.row {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	label {
+		font-size: 14px;
+		color: #444444;
+		padding-left: 0;
+	}
+}
+.pinet-breadcrumb {
+	padding-left: 0;
+	padding-right: 0;
+}
+#product-list, .listview {
+	.panel-body {
+		background-color: #221342;
+		border: none;
+	}
+	.panel-footer {
+		border-bottom: 1px solid #ebebeb;
+		border-top: 1px solid #ebebeb;
+	}
+	.product-thumbnail {
+		// border: 0;
+		.product-thumbnail__title {
+			.link {
+				font-size: 16px;
+				color: #444444;
+				.title {
+					margin-bottom: 5px;
+					color: #444444;
+				}
+				.introduction {
+					color: #777777;
+				}
+			}
+		}
+		.product-thumbnail__detail {
+			i {
+				font-style: normal;
+			}
+			.price {
+				color: #f76120;
+				strong {
+					font-size: 22px;
+				}
+			}
+			.value {
+				color: #999999;
+				margin-left: 10px;
+			}
+		}
+		.product-thumbnail__footer {
+			.sales, span {
+				color: #777777;
+				b {
+					color: #444444;
+				}
+			}
+			.rate-intro {
+				color: #999999;
+				display: inline-block;
+				float: right;
+			}
+		}
+	}
+
+	.panel-footer {
+		border-top: none;
+		.link {
+			color: #444444;
+		}
+	}
+}
+#coupon-list {
+	.panel-footer {
+		a {
+			color: #444444;
+		}
+	}
+}
+
+
+
+
+@mixin section_merchant_details($args...){
+	$screen-width: nth($args, 1);
+	$screen-alias: nth($args, 2);
+	@if $screen-width < 769 {
+		body {
+			overflow-x: hidden;
+			#main-content {
+				.list {
+					width: 100%;
+					padding: 0 30px;
+				}
+				#menu {
+					margin-bottom: 20px;
+				}
+				.merchant-details {
+					.merchant-info {
+						padding-left:0px;
+						>.row{
+							padding: 6px 0;
+							label {
+								line-height: 32px;
+								color:#777777;
+								margin:0px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@else if $screen-width > 768 and $screen-width < 1025 {
+		body {
+			#main-content {
+				.merchant-details {
+					.merchant-info {
+						padding-left:0px;
+						>.row{
+							padding: 6px 0;
+							label {
+								line-height: 32px;
+								color:#777777;
+								margin:0px;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

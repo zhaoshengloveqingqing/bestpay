@@ -1,0 +1,5 @@
+The username is not exists!: Username "%s" is not exists!
+The username is inactive!: Username "%s" is inactive!
+ACTIVE: valid
+INACTIVE: invalid
+ConfirmInfo: The order will be deleted from the list of orders to disappear, and can not be restored, are you sure you want to delete

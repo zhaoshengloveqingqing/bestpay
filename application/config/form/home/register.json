@@ -1,0 +1,46 @@
+[
+	{
+		"field": "username",
+		"label": "Username",
+		"rules": ["required"]
+	},
+	{
+		"field": "password",
+		"label": "Password",
+		"rules": [
+			{
+			"minlength": 6,
+			"maxlength": 32
+			},
+			"required"
+		]
+	},
+	{
+		"field": "password_confirm",
+		"label": "Password Confirm",
+		"rules": [
+			{
+			"minlength": 6,
+			"maxlength": 32
+			},
+			"required"
+		]
+	},
+	{
+		"field": "mobile",
+		"label": "Mobile",
+		"rules": [
+			{
+			"minlength": 6,
+			"maxlength": 32
+			},
+			"required"
+		]
+	},
+	{
+		"field": "birthday",
+		"label": "Birthday",
+		"rules": "required",
+		"type": "datepicker"
+	}
+]

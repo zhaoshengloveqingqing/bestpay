@@ -1,0 +1,46 @@
+[
+	{
+		"field": "province",
+		"label": "Address"
+	},
+	{
+		"field": "city",
+		"label": "",
+		"cascade_field": "province",
+		"cascade_model": "place"
+	},
+	{
+		"field": "area",
+		"label": "",
+		"cascade_field": "city",
+		"cascade_model": "place"
+	},
+	{
+		"field": "delivery_address",
+		"label": "Delivery Address"
+	},
+	{
+		"field": "consignee",
+		"label": "Consignee"
+	},
+	{
+		"field": "mobile",
+		"label": "Mobile"
+	},
+	{
+		"field": "uid",
+		"rules": [
+			{
+				"type": "hidden"
+			}
+		]
+	},
+	{
+		"field": "id",
+		"rules": [
+			{
+				"type": "hidden"
+			}
+		]
+	}
+]

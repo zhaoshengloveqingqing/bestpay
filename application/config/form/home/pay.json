@@ -1,0 +1,12 @@
+[
+	{
+		"field": "bestpay",
+		"label": "",
+		"rules": [
+			{
+			"type": "radio"
+			},
+			"required"
+		]
+	}
+]

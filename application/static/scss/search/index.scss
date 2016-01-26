@@ -1,0 +1,353 @@
+body {
+	overflow-x: hidden;
+//	.listview_wrapper {
+//		padding-top: 15px;
+//		.listview {
+//			padding-top: 0;
+//			.listview_item {
+//				margin-bottom: 30px;
+//				&.first+.listview_item {
+//					.product-thumbnail {
+//						margin-left: 3px !important;
+//					}
+//				}
+//				&.first+.listview_item+.listview_item {
+//					.product-thumbnail {
+//					}
+//				}
+//				&.last {
+//					.product-thumbnail {
+//						float: right;
+//					}
+//				}
+//			}
+//			.product-thumbnail {
+//				border-radius: 0;
+//				padding: 0;
+//				width: 287px;
+//				margin-right: 4px !important;
+//				margin-left: 4px !important;
+//				margin-bottom: 0 !important;
+//				&:hover {
+//					.caption {
+//						border-bottom: 5px solid #16b874;
+//					}
+//				}
+//				.responsive {
+//					img {
+//						width: 285px;
+//						height: 285px;
+//					}
+//				}
+//				.caption {
+//					width: 100%;
+//					height: 100px;
+//					background: #fafafa;
+//					border-top:1px solid #cccccc;
+//					p {
+//						font-size: 14px;
+//						word-break: break-all;
+//						word-wrap: break-word;
+//						height: 23px;
+//						line-height: 23px;
+//						overflow-y: hidden;
+//						margin-bottom: 6px;
+//						.price {
+//							color: #ba080b;
+//							font-size: 21px;
+//						}
+//						.yuanprice {
+//							text-decoration: line-through;
+//							color: #5d5d5d;
+//							font-size: 12px;
+//							padding-left: 20px;
+//						}
+//					}
+//					&:hover {
+//						background: #ededed;
+//						p {
+//							font-weight: 500;
+//						}
+//					}
+//				}
+//			}
+//		}
+//	}
+//
+//	.listview_wrapper.no-result {
+//		.listview {
+//			overflow: visible;
+//			height: 30px !important;
+//		}
+//		.listview_pagination {
+//			display: none;
+//		}
+//	}
+
+	#main-content {
+		padding-left: 0;
+		@include center(1180px);
+		padding-right: 0;
+		margin-top: 30px;
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		#search_index {
+			margin-top: 15px;
+			position: relative;
+			display: inline-table;
+			width: 100%;
+			padding-bottom: 10px;
+			.search_list {
+				padding-left: 0;
+
+			}
+			.no-result{
+				display: block;
+				text-align: center;
+				margin: 0 auto;
+				width: 1180px;
+			}
+			li {
+				width: 25%;
+				padding-right: 0.5%;
+				float: left;
+				margin-bottom: 30px;
+				list-style: none;
+				.product-thumbnail {
+					border-radius: 0;
+					padding: 0;
+					width: 287px;
+					margin-right: 4px !important;
+					margin-left: 4px !important;
+					margin-bottom: 0 !important;
+					&:hover {
+						.caption {
+							border-bottom: 5px solid #16b874;
+						}
+					}
+					.responsive {
+						img {
+							width: 285px;
+							height: 285px;
+						}
+					}
+					.caption {
+						width: 100%;
+						height: 100px;
+						background: #fafafa;
+						border-top:1px solid #cccccc;
+						p {
+							font-size: 14px;
+							word-break: break-all;
+							word-wrap: break-word;
+							height: 23px;
+							line-height: 23px;
+							overflow-y: hidden;
+							margin-bottom: 6px;
+							.price {
+								color: #ba080b;
+								font-size: 21px;
+							}
+							.yuanprice {
+								text-decoration: line-through;
+								color: #5d5d5d;
+								font-size: 12px;
+								padding-left: 20px;
+							}
+						}
+						&:hover {
+							background: #ededed;
+							p {
+								font-weight: 500;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.layer {
+			li {
+				float: left;
+				list-style: none;
+				margin: 0 16px 0 0;
+				a {
+					padding: 0 4px;
+					color:#444444;
+					padding: 5px 10px;
+					&:hover{
+						color:#ffffff;
+						text-decoration: none;
+						background-color: #16b874;
+						border-radius: 30px;
+					}
+				}
+				&.active{
+					a {
+						color:#ffffff;
+						padding: 5px 10px;
+						background-color: #16b874;
+						text-decoration: none;
+						border-radius: 30px;
+					}
+				}
+			}
+		}
+	}
+	.category {
+		@include center(1180px);
+		padding-left: 0;
+		padding-right: 0;
+		border: 1px dashed #dddddd;
+		margin-top: 30px;
+		margin-bottom: 55px;
+		padding: 10px 25px;
+		.filter {
+			clear: both;
+			position: relative;
+			border-bottom: 1px dashed #dddddd;
+			height: 40px;
+			overflow: hidden;
+			line-height: 40px;
+			p {
+				width: 80px;
+				margin-bottom: 0;
+				float: left;
+				font-size: 14px;
+			}
+			.layer {
+				margin-bottom: 0;
+				float: left;
+				li {
+					margin-bottom: 0;
+				}
+			}
+			span {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				font-size: 12px;
+				display: none;
+				&:after {
+					content: "\2b";
+					font-family: 'Glyphicons Halflings';
+					font-size: 8px;
+					color: #666666;
+				}
+			}
+			span.style {
+				&:after {
+					content: "\2212";
+					font-family: 'Glyphicons Halflings';
+					font-size: 8px;
+					color: #666666;
+				}
+			}
+			&:last-child {
+				border-bottom:none;
+			}
+		}
+	}
+	.filter {
+		display: none;
+		margin: 0;
+	}
+
+	.filter:before {
+		content: none;
+	}
+
+
+	.sort {
+		margin: 0;
+	}
+
+	.classification {
+		list-style: none;
+		li {
+			float: left;
+		}
+	}
+
+	.filter {
+		h3 {
+			display: none;
+		}
+	}
+
+
+	.nav-title {
+		padding-bottom: 10px;
+		border-bottom: 3px solid #dddddd;
+		h3 {
+			margin: 0;
+			font-size: 16px;
+			span {
+				padding-left: 20px;
+				color: #2d2d2d;
+				font-size: 14px;
+				font-style: italic;
+			}
+		}
+		li {
+			margin-left: 30px;
+			background-color: transparent;
+			a {
+				padding: 0;
+				color: #444444;
+				background-color: transparent;
+				&:after {
+					content: "\e094";
+					font-family: 'Glyphicons Halflings';
+					font-size: 10px;
+					color: #666666;
+				}
+				&:hover {
+					color: #16b874;
+					background-color: transparent;
+				}
+			}
+			&:first-child{
+				margin: 0;
+			}
+			&.active {
+				background-color: transparent;
+				a {
+					background-color: transparent;
+					color: #16b874;
+					&:hover {
+						color: #16b874;
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nav-title {
+	li{
+		a.up{
+			background-color: transparent;
+			&:after {
+				content: "\e093";
+			}
+		}
+	}
+}
+
+
+
+
+
+@media \0screen {
+	.list {
+		> .responsive {
+			margin-top: 50px;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"author": "andy",
+	"date": "Fri Feb 27 13:31:44 2015",
+	"version": "1.0",
+	"name": "Yizhifu",
+	"doc":"yizhifu",
+	"depends": ["StringJs", "layer"],
+	"js": {
+		"files": [
+			"es5-shim",
+			"common",
+			"pinet_tags",
+			"stickUp",
+			"jquery.placeholder",
+			"linkselect"
+		]
+	},
+    "scss": {
+        "files": [
+            "yizhifu_base",
+            "yizhifu_mixin",
+            "yizhifu_nav",
+            "yizhifu_listview",
+            "yizhifu_advance",
+            "yizhifu_locallife",
+	        "locallife_out"
+        ]
+    }
+}

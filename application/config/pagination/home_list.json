@@ -1,0 +1,24 @@
+{
+	"from": "products",
+	"columns": [
+		{ "data":"products.id", "action":"product/show", "title":"ID" },
+		{ "data":"merchants.name", "title":"Merchant", "action":"merchant/show", "refer":"merchants.id" },
+		{ "data":"categories.name", "title":"Category", "action":"categorie/show", "refer":"categories.id" },
+		{ "data":"products.name", "title":"Name" },
+		{ "data":"products.price", "title":"Price" },
+		{ "data":"products.discount_price", "title":"Discount Price" },
+		{ "data":"products.amount", "title":"Amount" },
+		{ "data":"products.status", "title":"Status" },
+		{ "data":"products.note", "title":"Note" },
+		{ "data":"products.expire_date", "title":"Expire Date" },
+		{ "data":"products.create_date", "title":"Create Date" },
+		{ "data":"products.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["merchants", {"products.merchant_id":"merchants.id"}]
+	,
+		["categories", {"products.category_id":"categories.id"}]
+	],
+	"pageLength":"9",
+	"selectType": "single"
+}

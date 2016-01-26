@@ -1,0 +1,14 @@
+{
+	"from": "product_photos",
+	"columns": [
+		{ "data":"product_photos.id", "action":"product_photo/show", "title":"ID" },
+		{ "data":"products.name", "title":"Product", "action":"product/show", "refer":"products.id" },
+		{ "data":"product_photos.note", "title":"Note" },
+		{ "data":"product_photos.status", "title":"Status" },
+		{ "data":"product_photos.create_date", "title":"Create Date" },
+		{ "data":"product_photos.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["products", {"product_photos.product_id":"products.id"}]
+	]
+}

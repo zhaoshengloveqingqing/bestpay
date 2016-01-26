@@ -1,0 +1,1 @@
+show user basic info page

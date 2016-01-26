@@ -1,0 +1,32 @@
+[
+	{
+		"field": "branch",
+		"label": "Select branch"
+	},
+	{
+		"field": "group_purchase",
+		"label": "Group-buying",
+		"cascade_field": "branch",
+		"cascade_model": "shop"
+	},
+	{
+		"field": "start_time",
+		"label": "Consumption time",
+		"rules":[
+			{"data-role":"date dategroup"},
+			{"data-date-options": "{ format: 'YYYY-MM-DD' }"},
+			{"data-date-control":"front"}
+		]
+	},
+	{
+		"field": "end_time",
+		"label": "~",
+		"placeholder": "Consumption time",
+		"rules":[
+			{"data-role":"date dategroup"},
+			{"data-date-options": "{ format: 'YYYY-MM-DD' }"},
+			{"data-for": "start_time"},
+			{"data-date-control":"end"}
+		]
+	}
+]

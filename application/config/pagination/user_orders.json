@@ -1,0 +1,40 @@
+{
+    "from": "orders",
+    "columns": [
+        { "data": "orders.id", "title" : "Order ID", "action":"coupon_buy"},
+        { "data": "orders.name", "title" : "Name", "refer":"users.id", "action":"coupon_receive"},
+        { "data": "orders.order_number", "title" : "Order Number"},
+        { "data": "orders.status", "title" : "Status"},
+        { "data": "orders.note", "title" : "Note"},
+        { "data": "order_items.price", "title" : "Price", "orderable":true},
+        { "data": "order_items.amount", "title" : "Amount"},
+        { "data": "product_photos.path", "title" : "Path"},
+        { "data": "orders.create_date", "title" : "Create Date", "orderable":true},
+	    { "data": "orders.timestamp", "title" : "Time Stamp"},
+	    { "data": "order_items.product_id", "title" : "Product ID"},
+	    { "data": "products.status", "title" : "Product Status"},
+	    { "data": "products.expire_date", "title" : "Expire Date"},
+	    { "data": "customer_products.code", "title" : "Code"},
+	    { "data": "customer_products.status", "title" : "Status"},
+	    { "data": "products.category_id", "title" : "Category ID"}
+
+    ],
+    "join": [
+        ["order_items", {"order_items.order_id": "orders.id"}],
+        ["product_photos",{"product_photos.product_id": "order_items.product_id"}],
+	    ["customer_products",{"customer_products.create_date": "orders.create_date"}],
+	    ["products",{"products.id": "product_photos.product_id"}],
+        ["users", {"users.id": "orders.uid"}]
+    ],
+	"pageLength":"5",
+	"orderby":"orders.id desc",
+	"groupBy" :["orders.id"],
+	"listtype": "static",
+	"selectType": "single",
+	"length_select_template": "",
+	"fliter_template": "",
+	"order_box": "",
+	"order_dir_box": "",
+	"columns_count": 0,
+	"clearSearch": true
+}

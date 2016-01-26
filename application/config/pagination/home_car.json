@@ -1,0 +1,34 @@
+{
+	"from": "products",
+	"columns": [
+		{ "data":"products.id", "orderable":true, "action":"product/show", "title":"ID" },
+		{ "data":"merchants.name", "orderable":true, "title":"Merchant", "action":"merchant/show", "refer":"merchants.id" },
+		{ "data":"categories.name", "title":"Category", "action":"categorie/show", "refer":"categories.id" },
+		{ "data":"products.name", "orderable":true, "title":"Name" },
+		{ "data":"product_photos.path", "title":"Path" },
+		{ "data":"products.price", "orderable":true, "title":"Price" },
+		{ "data":"products.discount_price", "title":"Discount Price" },
+		{ "data":"products.amount","orderable":true, "title":"Amount" },
+		{ "data":"products.status", "title":"Status" },
+		{ "data":"products.note","searchable":false, "title":"Note" },
+		{ "data":"products.expire_date", "title":"Expire Date" },
+		{ "data":"products.create_date", "title":"Create Date" },
+		{ "data":"products.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["merchants", {"products.merchant_id":"merchants.id"}]
+	,
+		["categories", {"products.category_id":"categories.id"}]
+	,
+		["product_photos", {"products.id":"product_photos.product_id"}, "left"]
+	],
+	"pageLength":"3",
+	"listtype": "static",
+	"selectType": "single",
+	"columns_count": 0,
+	"length_select_template": "",
+	"fliter_template": "",
+	"order_box": "",
+	"order_dir_box": "",
+	"pagination_template": ""
+}

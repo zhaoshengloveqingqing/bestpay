@@ -1,0 +1,174 @@
+#nav {
+	background-color: #ebebeb;
+	padding: 10px 40px;
+	margin-bottom:40px;
+	.nav-classify {
+		> li:not(.nav-classify__title) {
+			&:hover{
+				border-bottom:none;
+			}
+		}
+	}
+}
+.form-group.control-group {
+	position: relative;
+	div {
+		#field_group_purchaseSelectBoxItContainer,#field_branchSelectBoxItContainer {
+			width:445px !important;
+			#field_group_purchaseSelectBoxIt,#field_branchSelectBoxIt{
+				width:100% !important;
+				border-radius: 0 !important;
+				box-shadow: #a1a1a1 1px 1px 0px 1px inset;
+			}
+		}
+	}
+
+	.label[for="field_end_time"] {
+		position: relative;
+		color: #008080;
+	}
+	width: 210px;
+	display: inline-block;
+	margin-right: 10px;
+	input {
+		border-radius: 0;
+	}
+
+}
+
+
+
+
+a.time {
+	margin-left: 20px;
+	color: #444444;
+	cursor: pointer;
+	&:active ,&:hover {
+		color: #df9823;
+	}
+}
+.container {
+	padding: 0;
+	.nav {
+		border-bottom: 3px solid #16af69;
+		> li {
+			width: 190px;
+		}
+		> li > a {
+			margin-right: 10px;
+			background-color: #f5f5f5;
+			border: 1px solid #a9a9a9;
+			border-bottom: 1px solid #16af69;
+			color: #444444;
+			cursor: pointer;
+
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+			&:hover {
+				background-color: #16af69;
+				color: #ffffff;
+				border-color: transparent;
+			}
+		}
+		> li.active,
+		> li:nth-child(3) > a {
+			background-color: #16af69;
+			color: #ffffff;
+			border-color: transparent;
+		}
+	}
+}
+div.time {
+	position: relative;
+}
+.list {
+	display: inline-block;
+	position: absolute;
+	top:198px;
+}
+#endtime {
+	label {
+		position: relative;
+		top:30px;
+		right:8px;
+	}
+	input {
+		margin-left: 10px;
+	}
+}
+.container{
+	margin-bottom:50px;
+	margin-top: 30px;
+	h3{
+		font-weight: 500;
+	}
+	.clips-form {
+		margin:20px 0 5px 0;
+		.time {
+
+		}
+		.action {
+			margin-left: 0px;
+			float: right;
+		}
+		.btn {
+			display: block;
+			width: 130px;
+			height: 35px;
+			margin-top: 10px;
+			background-color:#16af69;
+			box-shadow:none;
+			border:none;
+			&:hover,
+			&:focus,
+			&.focus {
+				color: #ffffff;
+				background-color: #008f3c;
+				outline: none;
+			}
+		}
+	}
+}
+table {
+	thead {
+		tr {
+			background-color: #eaeaea !important;
+		}
+	}
+}
+
+
+
+
+
+
+
+@media \0screen {
+	.container {
+		width:1180px;
+		margin: 0 auto;
+		ul {
+			li {
+				a[title="Checked Coupon Record"] {
+					background-color: #16af69;
+					color: #ffffff;
+				}
+			}
+		}
+		.clips-form {
+			.row {
+				position: relative;
+				.list {
+					left:80%;
+					position: absolute;
+					top:30px;
+					width:55%
+				}
+			}
+			.action {
+				float:none;
+			}
+		}
+	}
+}

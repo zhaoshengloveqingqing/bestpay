@@ -1,0 +1,107 @@
+%absolute-center {
+	position: absolute;
+	z-index: 1000;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+%dis-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@mixin absolute-center() {
+	position: absolute;
+	z-index: 1000;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+@mixin set-margin-and-padding($margin:0, $padding: 0) {
+	margin: $margin;
+	padding: $padding;
+}
+
+@mixin fullparent-without-margin-and-padding() {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+@mixin set-row-padding($padding) {
+	padding: $padding;
+}
+
+@mixin center($width){
+	width: $width;
+	margin: 0 auto;
+}
+
+@mixin icon() {
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin ul() {
+
+}
+
+
+
+
+
+ //btn
+@mixin green-btn(){
+	background: #16AF69;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #FFFFFF;
+	width: 160px;
+	height: 45px;
+	outline:none;
+	border: none;
+}
+
+
+@mixin block-btn($bgcolor,$color){
+	background: $bgcolor;
+	font-size: 16px;
+	color: $color;
+	width: 84%;
+	height: 48px;
+	border: 1px solid #16AF69;
+	outline:none;
+}
+
+@mixin radius-btn(){
+	background: #16AF69;
+	border-radius: 25px;
+	font-size: 12px;
+	width: 100px;
+	height: 35px;
+	color: #FFFFFF;
+	outline:none;
+	border: none;
+}
+
+@mixin common-btn($bdcolor,$color){
+	background: #FFFFFF;
+	font-size: 14px;
+	border:1px solid $bdcolor;
+	color: $color;
+	width: 75px;
+	height: 35px;
+	outline:none;
+	border-radius: 4px;
+}

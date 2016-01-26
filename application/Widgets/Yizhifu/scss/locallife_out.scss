@@ -1,0 +1,27 @@
+@mixin init_locallife_out($args...) {
+	.back_btn {
+		@include green-btn();
+	}
+	.login_block_btn {
+		@include block_btn(#16AF69,#ffffff);
+	}
+	.back_block_btn {
+		@include block_btn(#ffffff,#16AF69);
+	}
+	.add_btn{
+		@include radius-btn();
+	}
+	.gray_btn {
+		@include common-btn(#dddddd,#999999);
+	}
+	.orange_btn {
+		@include common-btn(#F19C2D,#F19C2D);
+	}
+	.green_btn {
+		@include common-btn(#16AF69,#16AF69);
+	}
+	button{
+		margin-top: 5px;
+	}
+}
+

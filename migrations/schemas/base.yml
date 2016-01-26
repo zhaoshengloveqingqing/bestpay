@@ -1,0 +1,671 @@
+################################################################################
+#
+# Base Models for Pinet Bestpay
+#
+# @author Jack
+# @version 1.1
+# @date Sun Mar 15 11:57:53 2015
+#
+################################################################################
+
+
+#===============================================================================
+#
+# Groups Table
+#
+# The user groups
+#
+#===============================================================================
+groups:
+    name:
+        label: Name
+        refer: true
+        type: string
+        key: true
+        options:
+            limit: 50
+    note:
+        label: Note
+        type: string
+        options:
+            'null': true
+            limit: 1024
+
+#===============================================================================
+#
+# Users Table
+#
+# All the user in the system is located in this table
+#
+#===============================================================================
+users:
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Customers Table
+#
+# The customers information table, customer and user shares the same id
+#
+#===============================================================================
+customers:
+    uid:
+        label: User ID
+        foreign_key: users
+    name: # Customer's name
+        label: Name
+        refer: true
+        type: string
+        key: true
+        options:
+            limit: 32
+    username:
+        label: Username
+        type: string
+        key: true
+        options:
+            limit: 60
+    password:
+        label: Password
+        type: string
+        key: true
+        options:
+            limit: 80
+    sex:
+        label: sex
+        type: string
+        key: true
+        options:
+            limit: 1
+    birthday:
+        label: Birthday
+        type: datetime
+        key: true
+    mobile:
+        label: Mobile
+        type: string
+        key: true
+        options:
+            limit: 11
+    email:
+        label: Email
+        type: string
+        key: true
+        options:
+            limit: 32
+    province:
+         label: Province
+         type: string
+         key: true
+         options:
+             limit: 32
+    city:
+         label: City
+         type: string
+         key: true
+         options:
+             limit: 32
+    area:
+            label: Area
+            type: string
+            key: true
+            options:
+                limit: 32
+
+    delivery_address:
+        label: Delivery Address
+        type: string
+        key: true
+        options:
+            limit: 260
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+                'null': true
+    default_address:
+            label: Default Address
+            type: string
+            key: true
+            options:
+                    'null': true
+    consignee:
+                label: Consignee
+                type: string
+                key: true
+                options:
+                        'null': true
+
+
+#===============================================================================
+#
+# GroupUsers Table
+#
+# The medium table between users and groups, since user and groups are many to
+# many
+#
+#===============================================================================
+group_users:
+    form: false # Skip form generation
+    pagination: false # Skip pagination generation
+    uid:
+        foreign_key: users
+    gid:
+        foreign_key: groups
+
+#===============================================================================
+#
+# Merchants Table
+#
+# The merchant informations
+#
+#===============================================================================
+merchants:
+    uid:
+        label: User ID
+        foreign_key: users
+    name:
+        label: Name
+        type: string
+        key: true
+        refer: true
+        options:
+            limit: 200
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    parent: # The parent merchant of this merchant, can be null(the main store)
+        foreign_key: merchants
+        options:
+            'null': true
+    logo_url:
+        label: Logo
+        type: string
+        options:
+            limit: 1024
+    description:
+        label: Description
+        type: text
+    location:
+        label: Location
+        type: string
+        options:
+            limit: 500
+    longitude:
+        label: Longitude
+        type: decimal
+        options:
+            precision: 18
+            scale: 6
+    latitude:
+        label: Latitude
+        type: decimal
+        options:
+            precision: 18
+            scale: 6
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Categories Table
+#
+# All kinds of category goes into this table, so this table has a type field,
+# in case you want only some kind of category(say, product category)
+#
+#===============================================================================
+categories:
+    parent_id:
+        label: Parent Category
+        key: true
+        options:
+            'null': true
+    name:
+        label: Name
+        refer: true
+        type: string
+        options:
+            limit: 64
+    type:
+        label: Type
+        type: string
+        key: true
+        options:
+            limit: 64
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    create_date:
+        type: datetime
+        key: true
+    timestamp:
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Products Table
+# 
+# The product information table, all kinds of products information goes here
+#
+#===============================================================================
+products:
+    merchant_id:
+        label: Merchant
+        foreign_key: merchants
+        options:
+            'null': true
+    category_id:
+        label: Category
+        foreign_key: categories
+    name:
+        label: Name
+        type: string
+        refer: true
+        key: true
+        options:
+            limit: 200
+    price:
+        label: Price
+        type: decimal
+        options:
+            precision: 18
+            scale: 2
+    discount_price:
+        label: Discount Price
+        type: decimal
+        options:
+            precision: 18
+            scale: 2
+    amount:
+        label: Amount
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    note:
+        label: Note
+        type: text
+        options:
+            'null': true
+    expire_date:
+        label: Expire Date
+        type: datetime
+        key: true
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Carts Table
+#
+# Shopping carts
+#
+#===============================================================================
+carts:
+    cid:
+        label: Customer ID
+        foreign_key: customers
+    product_id:
+        label: Product
+        foreign_key: products
+    amount:
+        label: Amount
+
+#===============================================================================
+#
+# Products Photos Table
+# 
+# The product information table, all kinds of products information goes here
+#
+#===============================================================================
+product_photos:
+    product_id:
+        label: Product
+        foreign_key: products
+    path:
+        type: string
+        label: Photo Path
+        options:
+            limit: 1024
+    is_primary:
+        options:
+            limit: 1
+            default: 0
+    note:
+        label: Note
+        type: text
+        options:
+            'null': true
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Products Merchants Table
+# 
+# Many product can use across merchants(the main and branch store), or, the
+# product is a coupon.
+#
+#===============================================================================
+product_merchants:
+    form: false
+    pagination: false
+    product_id:
+        label: Product
+        foreign_key: products
+    merchant_id:
+        label: Merchant
+        foreign_key: merchants
+
+#===============================================================================
+#
+# Payment Methods Table
+# 
+# The payment methods of bestpay
+#
+#===============================================================================
+payment_methods:
+    name: # The name of the payment method
+        label: Name
+        type: string
+        key: true
+        options:
+            limit: 200
+    code: # The app code of the payment method
+        label: Code
+        type: string
+        options:
+            limit: 100
+    note: # The notes of the payment method
+        label: Note
+        type: text
+        options:
+            'null': true
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Orders Table
+# 
+# All the orders use placed is located in this table
+#
+#===============================================================================
+orders:
+    uid:
+        label: Owner
+        foreign_key: users
+    name:
+        label: Name
+        type: string
+        options:
+            limit: 200
+    order_number:
+        label: Serial
+        type: string
+        key: true
+        options:
+            limit: 100
+    note:
+        label: Note
+        type: text
+        options:
+            'null': true
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    type:
+          label: Type
+          type: string
+          key: true
+          options:
+                  'null': true
+    cancel_reason:
+          label: Cancel Reason
+          type: string
+          key: true
+          options:
+                  'null': true
+    instruction:
+          label: Instruction
+          type: string
+          key: true
+          options:
+                  'null': true
+
+    payment_id:
+        label: Payment Mehtod
+        foreign_key: payment_methods
+    mid:
+          label: Merchant ID
+          options:
+               'null': true
+          foreign_key: merchants
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Order Items Table
+# 
+# The items in the order
+#
+#===============================================================================
+order_items:
+    order_id:
+        label: Order
+        foreign_key: orders
+    uid:
+        label: Owner
+        foreign_key: users
+    product_id:
+        label: Product
+        foreign_key: products
+    amount:
+        label: Amount
+        options:
+            default: 1
+    price:
+        label: Price
+        type: decimal
+        options:
+            precision: 18
+            scale: 2
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Customer Products Table
+# 
+# The consumable products and customers medium table since users are many to many
+#
+#===============================================================================
+customer_products:
+    product_id:
+        label: Product
+        foreign_key: products
+    cid:
+        label: Owner
+        foreign_key: customers
+    code:
+        label: Code
+        type: string
+        options:
+            limit: 50
+    status:
+        label: Status
+        type: string
+        key: true
+        options:
+            limit: 16
+            default: "ACTIVE"
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Merchants Products Table
+# 
+# The consumable products and merchants medium table since users are many to many
+#
+#===============================================================================
+merchant_products:
+    product_id:
+        label: Product
+        foreign_key: products
+    mid:
+        label: Merchant
+        foreign_key: merchants
+    create_date:
+        label: Create Date
+        type: datetime
+        key: true
+    timestamp:
+        label: Modify Date
+        type: timestamp
+        key: true
+
+#===============================================================================
+#
+# Tag Table
+#
+# All kinds of tag goes into this table
+#
+#===============================================================================
+tags:
+    path:
+        label: Path
+        type: text
+    name:
+        label: Name
+        refer: true
+        type: string
+        options:
+            limit: 64
+    level:
+        label: Level
+        options:
+            default: 1
+    order:
+        label: Order
+        options:
+            default: 1
+    note:
+        label: Note
+        type: text
+    create_date:
+        type: datetime
+        key: true
+
+#===============================================================================
+#
+# Product Tag Table
+#
+# Relate bettwen prodcut and tag
+#
+#===============================================================================
+product_tags:
+    form: false # Skip form generation
+    pagination: false # Skip pagination generation
+    product_id:
+        label: Product
+        foreign_key: products
+    tag_id:
+        label: Tag
+        foreign_key: tags

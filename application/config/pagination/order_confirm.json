@@ -1,0 +1,12 @@
+{
+	"from": "payments",
+	"columns": [
+		{ "data": "payments.id", "title" : "Payment ID", "action":"home/pay", "toggle": true},
+		{ "data": "payments.name", "title" : "Name"}
+	],
+	"order_box": "",
+	"order_dir_box": "",
+	"fliter_template": "",
+	"length_select_template": "",
+	"pagination_template": ""
+}

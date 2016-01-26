@@ -1,0 +1,16 @@
+{
+	"from": "user_infos",
+	"columns": [
+		{ "data": "user_infos.id", "title" : "ID", "action":"admin/user/modify_merchant", "toggle": true},
+		{ "data": "users.id", "title" : "User ID", "action":"coupon_buy", "toggle": true},
+		{ "data": "user_infos.username", "title" : "UserName"},
+		{ "data": "merchants.name", "title" : "Name", "refer":"users.id", "action":"coupon_receive"},
+		{ "data": "user_infos.password", "title" : "Password"},
+		{ "data": "user_infos.create_date", "title" : "Create_Date"}
+	],
+	"join": [
+		["users", {"users.id": "user_infos.uid"}],
+		["merchants", {"merchants.uid": "users.id"}]
+	],
+	"pageLength" : 9
+}

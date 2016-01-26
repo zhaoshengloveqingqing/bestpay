@@ -1,0 +1,51 @@
+
+
+@mixin slider($width, $height) {
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	width: $width; 
+	height: $height;
+	
+	& [u="slides"] {
+		cursor: move; 
+		position: absolute; 
+		overflow: hidden; 
+		left: 0; 
+		top: 0; 
+		width: $width; 
+		height: $height;
+	}
+}
+
+@mixin slider-navigatior() {
+	position: absolute;
+	& div, & div:hover, & .av {
+		position: absolute;
+		/* size of bullet elment */
+		width: 16px;
+		height: 16px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	@content;
+}
+
+.pinet-full-slider {
+	@include slider(600px, 300px);
+}
+
+.pinet-full-slider [u="navigator"] {
+	@include slider-navigatior(){
+		bottom: 16px; 
+		right: 6px;
+		
+		div {
+			background-color: #545b62;
+		}
+
+		.av {
+			background-color: #03bb91;
+		}
+	};	
+}

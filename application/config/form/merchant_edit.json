@@ -1,0 +1,104 @@
+[
+	{
+		"field": "id",
+		"label": "ID",
+		"state": "readonly",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "uid",
+		"label": "User ID",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "name",
+		"label": "Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"200" },
+			"required"
+		]
+	},
+	{
+		"field": "status",
+		"label": "Status",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"16" },
+			"required"
+		]
+	},
+	{
+		"field": "is_main_store",
+		"label": "Main Store",
+		"rules": [
+			{ "type":"number" },
+			{ "maxlengh":"1" },
+			"required"
+		]
+	},
+	{
+		"field": "logo_url",
+		"label": "Logo",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"1024" },
+			"required"
+		]
+	},
+	{
+		"field": "description",
+		"label": "Description",
+		"rules": [
+			{ "type":"text" },
+			"required"
+		]
+	},
+	{
+		"field": "location",
+		"label": "Location",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"500" },
+			"required"
+		]
+	},
+	{
+		"field": "longitude",
+		"label": "Longitude",
+		"rules": [
+			{ "type":"decimal" },
+			"required"
+		]
+	},
+	{
+		"field": "latitude",
+		"label": "Latitude",
+		"rules": [
+			{ "type":"decimal" },
+			"required"
+		]
+	},
+	{
+		"field": "create_date",
+		"label": "Create Date",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "timestamp",
+		"label": "Modify Date",
+		"rules": [
+			{ "type":"timestamp" },
+			"required"
+		]
+	}
+]

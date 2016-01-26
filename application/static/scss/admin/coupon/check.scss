@@ -1,0 +1,134 @@
+#nav {
+	background-color: #ebebeb;
+	padding: 10px 40px;
+	margin-bottom:40px;
+	.nav-classify {
+		> li:not(.nav-classify__title) {
+			&:hover{
+				border-bottom:none;
+			}
+		}
+	}
+}
+//.nav {
+//	> li > a {
+//		&:hover,
+//		&:focus {
+//			background-color:transparent;
+//		}
+//	}
+//}
+.container {
+	padding: 0;
+	.nav {
+		border-bottom: 3px solid #16af69;
+		> li {
+			width: 190px;
+		}
+		> li > a {
+			margin-right: 10px;
+			background-color: #f5f5f5;
+			border: 1px solid #a9a9a9;
+			border-bottom: 1px solid #16af69;
+			color: #444444;
+			cursor: pointer;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+			&:hover {
+				background-color: #16af69;
+				color: #ffffff;
+				border-color: transparent;
+			}
+		}
+		> li.active,
+		> li:nth-child(1) > a {
+			background-color: #16af69;
+			color: #ffffff;
+			border-color: transparent;
+		}
+	}
+}
+
+
+.container{
+	margin-top: 40px;
+	margin-bottom:50px;
+	h3{
+		font-weight: 500;
+	}
+	.clips-form {
+		margin:55px 0 75px;
+		label {
+			padding-bottom: 10px;
+			font-weight: 200;
+		}
+		input {
+			height: 56px;
+			width: 490px;
+			box-shadow: #a1a1a1 1px 1px 0px 1px inset;
+			border-radius: 0;
+		}
+		select {
+			border-color:rgb(204, 204, 204);
+//			padding:6px 12px;
+			border-radius: 0 !important;
+			box-shadow: #a1a1a1 1px 1px 0px 1px inset;
+			height: 50px !important;
+
+		}
+		#field_branch_storeSelectBoxItContainer {
+			height: 50px !important;
+			line-height: 50px !important;
+			#field_branch_storeSelectBoxIt {
+				width:490px !important;
+				height: 50px !important;
+				box-shadow: #a1a1a1 1px 1px 0px 1px inset;
+				border-radius: 0 !important;
+			}
+		}
+		.selectboxit-container span {
+//			height: 50px;
+			line-height: 50px;
+//			display: block;
+		}
+		.action {
+			margin-left: 0px;
+			width: 490px;
+		}
+		.btn {
+			display: block;
+			width: 180px;
+			height: 50px;
+			float: right;
+			margin-top: 10px;
+			background-color:#16af69;
+			box-shadow:none;
+			border-radius: 6px;
+			border:none;
+			&:hover,
+			&:focus,
+			&.focus {
+				color: #ffffff;
+				background-color: #008f3c;
+			}
+		}
+	}
+}
+
+
+
+@media \0screen {
+	.container {
+		width:1180px;
+		margin: 0 auto;
+		ul {
+			li {
+				a[title="Check Coupon"] {
+					background-color: #16af69;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

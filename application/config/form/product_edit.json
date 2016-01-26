@@ -1,0 +1,101 @@
+[
+	{
+		"field": "id",
+		"label": "ID",
+		"state": "readonly",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "merchant_id",
+		"label": "Merchant",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "category_id",
+		"label": "Category",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "name",
+		"label": "Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"200" },
+			"required"
+		]
+	},
+	{
+		"field": "price",
+		"label": "Price",
+		"rules": [
+			{ "type":"decimal" },
+			"required"
+		]
+	},
+	{
+		"field": "discount_price",
+		"label": "Discount Price",
+		"rules": [
+			{ "type":"decimal" },
+			"required"
+		]
+	},
+	{
+		"field": "amount",
+		"label": "Amount",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "status",
+		"label": "Status",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"16" },
+			"required"
+		]
+	},
+	{
+		"field": "note",
+		"label": "Note",
+		"rules": [
+			{ "type":"text" },
+			"required"
+		]
+	},
+	{
+		"field": "expire_date",
+		"label": "Expire Date",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "create_date",
+		"label": "Create Date",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "timestamp",
+		"label": "Modify Date",
+		"rules": [
+			{ "type":"timestamp" },
+			"required"
+		]
+	}
+]

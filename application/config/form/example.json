@@ -1,0 +1,54 @@
+[
+	{
+		"field": "yizhifu",
+		"label": "",
+		"rules": [
+			{
+			"type": "radio"
+			},
+			"required"
+		]
+	},
+	{
+		"field": "date",
+		"label": "Date",
+		"rules": [
+			{"type":"text"},
+			{"data-role":"date"},
+			"required"
+		],
+		"options": "sdsds",
+		"messages": {
+			"required": "The id field must be set"
+		}
+	},
+	{
+		"field": "front",
+		"label": "Front",
+		"rules": [
+			{"type":"text"},
+			{"data-role":"date dategroup"},
+			{"data-date-options": "{ format: 'YYYY-MM-DD' }"},
+			{"data-date-control":"front"},
+			"required"
+		],
+		"messages": {
+			"required": "The id field must be set"
+		}
+	},
+	{
+		"field": "end",
+		"label": "End",
+		"rules": [
+			{"type":"text"},
+			{"data-role": "date dategroup"},
+			{"data-date-options": "{ format: 'YYYY-MM-DD' }"},
+			{"data-for": "front"},
+			{"data-date-control":"end"},
+			"required"
+		],
+		"messages": {
+			"required": "The id field must be set"
+		}
+	}
+]

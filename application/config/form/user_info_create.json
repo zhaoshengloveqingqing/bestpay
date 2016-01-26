@@ -1,0 +1,113 @@
+[
+	{
+		"field": "uid",
+		"label": "User ID",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "username",
+		"label": "Username",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"20" },
+			"required"
+		]
+	},
+	{
+		"field": "password",
+		"label": "Password",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"60" },
+			"required"
+		]
+	},
+	{
+		"field": "first_name",
+		"label": "First Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"20" }
+		]
+	},
+	{
+		"field": "last_name",
+		"label": "Last Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"20" }
+		]
+	},
+	{
+		"field": "gender",
+		"label": "Gender",
+		"rules": [
+			{ "type":"enum" },
+			{ "maxlengh":"1" },
+			"required"
+		]
+	},
+	{
+		"field": "birthday",
+		"label": "Birthday",
+		"rules": [
+			{ "type":"date" },
+			"required"
+		]
+	},
+	{
+		"field": "mobile",
+		"label": "Mobile Phone",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"32" },
+			"required"
+		]
+	},
+	{
+		"field": "profile_image",
+		"label": "Profile Image",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"1024" },
+			"required"
+		]
+	},
+	{
+		"field": "email_address",
+		"label": "Email",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"255" },
+			"required"
+		]
+	},
+	{
+		"field": "status",
+		"label": "Status",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"16" },
+			"required"
+		]
+	},
+	{
+		"field": "create_date",
+		"label": "Create Date",
+		"rules": [
+			{ "type":"datetime" },
+			"required"
+		]
+	},
+	{
+		"field": "timestamp",
+		"label": "Modify Date",
+		"rules": [
+			{ "type":"timestamp" },
+			"required"
+		]
+	}
+]

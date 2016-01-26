@@ -1,0 +1,16 @@
+[
+	{
+		"field": "order_id",
+		"label": "Order ID",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+	{
+		"field": "merchant_name",
+		"label": "Merchant Name"
+	}
+]

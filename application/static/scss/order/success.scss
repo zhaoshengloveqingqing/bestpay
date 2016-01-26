@@ -1,0 +1,98 @@
+.logo-section {
+	@include center(1180px);
+	margin-top: 15px;
+	margin-bottom: 15px;
+	.navbar {
+		.navbar__brand {
+			@extend %dis-table-cell;
+			width: 300px;
+			height: 72px;
+			vertical-align: bottom;
+			.responsive {
+				width: 300px;
+			}
+		}
+		.navbar__section {
+			@extend %dis-table-cell;
+		}
+		.navbar__action {
+			padding-left: 520px;
+			vertical-align: bottom;
+			.navbar-nav.top_navbar_left {
+				width: 350px;
+				li {
+					background-color: #e0e0e0;
+					width: 175px;
+					text-align: center;
+					height: 31px;
+					line-height: 31px;
+					float: left;
+
+				}
+				li.stepbar-current {
+					text-align: left;
+					background-color: #16b874;
+					color: #ffffff;
+					img {
+						width: 21px;
+						text-align: left;
+						vertical-align: top;
+					}
+					span{
+						padding-left: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#main-content {
+	@include center(1180px);
+	padding: 0 !important;
+	.row {
+		margin: 0px;
+	}
+
+	#success {
+		@include center(518px);
+		margin-top: 100px;
+		margin-bottom: 190px;
+		.panel-header {
+
+		}
+		.panel-body {
+			.media-left {
+				h4 {
+					a {
+						color: #585858;
+					}
+				}
+				.media-heading {
+					b {
+						font-weight: 500;
+					}
+				}
+			}
+			border-bottom: none;
+			p{
+				margin-top: 30px;
+				a {
+					font-size: 16px;
+					color: #444444;
+					text-decoration: underline;
+					cursor: pointer;
+					&:after {
+						content: "";
+						background: url(php_static_url("/application/static/img/order/icon2.png")) no-repeat;
+						width: 18px;
+						height: 18px;
+						display: inline-block;
+						position: relative;
+						top:5px;
+					}
+				}
+			}
+		}
+	}
+}

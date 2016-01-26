@@ -1,0 +1,31 @@
+{
+	"table_prefix":"bestpay_",
+	"namespace": ["Pinet\\BestPay\\"],
+	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
+    "filters": ["Security", "Rules", "Form", "Scss", "Css", "SmartyView", "MustacheView", "JsonView", "DirectView"],
+	"resolutions": [480, 640, 720, 769, 1025, 1280, 1440, 1920, 2880],
+	"helpers":["web", "html", "user"],
+	"default_view": "Smarty",
+	"debug_sass": true,
+	"use_rewrite": true,
+	"encryptor_private_key": "application/config/encryptor.key",
+	"encryptor_public_key": "application/config/encryptor_public.key",
+    "sass_preload": ["variables"],
+	"models": {
+	},
+	"logger": {
+		"handlers": {
+			"Stream" : ["php://stdin", "debug"],
+			"FirePHP" : ["debug"],
+			"ChromePHP": ["debug"]
+		},
+		"processors": ["Git", "PsrLogMessage", "Introspection", "Tag"]
+	},
+	"datasources": {
+		"mysql": {
+			"table_prefix":"bestpay_",
+			"type": "MySQLi",
+			"database": "bestpay_dev"
+		}
+	}
+}

@@ -1,0 +1,155 @@
+#main-content {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 55px;
+	padding-right: 55px;
+	margin:30px 0 50px;
+	.row {
+		margin:10px 0;
+	}
+}
+
+#header {
+	position: relative;
+	margin-bottom: 20px;
+	background-color: rgba(250, 250, 250, 0.5);
+}
+.nav-classify {
+	padding-bottom: 20px;
+	> li {
+		display: inline-block;
+		float: none;
+		vertical-align: middle;
+		padding-bottom: 5px;
+		margin-right: 20px;
+		border-bottom: none;
+		&:hover,&:focus {
+		  border-bottom: none;
+		}
+    }
+	>li:not(.nav-classify__title) {
+		&:hover {
+			border-bottom: none;
+		}
+	}
+	> li.nav-classify__title {
+		.media {
+			display: table;
+			height: 100%;
+			.media-left, .media-body {
+				display: table-cell;
+				vertical-align: middle;
+				height: 100%;
+			}
+			img {
+				width: 32px;
+				height: 32px;
+			}
+			h3 {
+				margin: auto;
+				font-size: 20px
+			}
+		}
+	}
+
+	> li > a {
+		color: #444444;
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			border:1px solid #444444;
+		}
+	}
+
+	> li.active {
+		border-bottom: none;
+		> a {
+			color: #444444;
+			background-color: transparent;
+			border:1px solid #444444;
+			&:hover,
+			&:focus {
+				color: #444444;
+				background-color: transparent;
+			}
+		}
+
+		&:hover {
+			border-bottom: none;
+		}
+	}
+}
+
+.clips-listview {
+
+	li.ui-selectee {
+		background: transparent;
+	}
+	.thumbnail {
+		border: none;
+	}
+	.thumbnail__link {
+		text-align: center;
+	}
+	.caption {
+		.product-thumbnail__title {
+			.link {
+				font-size: 16px;
+				color: #444444;
+				.title {
+					margin-bottom: 5px;
+					color: #444444;
+				}
+				.introduction {
+					color: #777777;
+				}
+			}
+		}
+		.product-thumbnail__footer {
+			span{
+				color: #777777;
+				strong {
+					color: #444444;
+				}
+			}
+			.btn {
+				display: inline-block;
+				margin-top: 10px;
+				padding:10px 20px;
+				color:#ffffff;
+				background-color:#444444;
+				border:none;
+				border-radius:2px;
+				&:hover {
+					background-color:#777777;
+					color: #ffffff;
+				}
+			}
+	    }
+	}
+	.product-coupon-info {
+		.clips-form{
+			h3 {
+				padding-top: 65px;
+			}
+		}
+	}
+}
+.panel-body {
+	border-bottom: none;
+	font-size: 14px;
+	.row {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	label {
+		font-size: 14px;
+		color: #444444;
+		padding-left: 0;
+	}
+}
+.pinet-breadcrumb {
+	padding-left: 0;
+	padding-right: 0;
+}

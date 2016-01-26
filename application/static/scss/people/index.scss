@@ -1,0 +1,130 @@
+body {
+	overflow-x: hidden;
+
+	.listview_wrapper {
+		.listview {
+			.listview_item {
+				width: 33%;
+				margin: 0;
+			}
+		}
+	}
+
+	.listview_wrapper.no-result {
+		.listview {
+			overflow: visible;
+			height: 30px !important;
+		}
+		.listview_pagination {
+			display: none;
+		}
+	}
+	#main-content {
+		margin-top: 30px;
+		@include center(1180px);
+		padding-left: 0;
+		padding-right: 0;
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.list {
+			width: 68%;
+			margin: 0 auto;
+		}
+		.layer {
+			li {
+				float: left;
+				list-style: none;
+				margin: 0 16px 4px 0;
+				a {
+					padding: 0 4px;
+					color:#444444;
+					padding: 5px;
+					&:hover{
+						color:#1fc95c;
+					}
+				}
+				&.active{
+					a {
+						color:#ffffff;
+						padding: 5px;
+						background-color: #1fc95c;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+
+	.category {
+		@include center(1180px);
+		padding-left: 0;
+		padding-right: 0;
+		border: 1px dashed #dddddd;
+		margin-top: 30px;
+		margin-bottom: 55px;
+		padding: 10px 25px;
+	}
+
+	.filter {
+		clear: both;
+		position: relative;
+		border-bottom: 1px dashed #dddddd;
+		height: 40px;
+		overflow: hidden;
+		line-height: 40px;
+		&.display {
+			height: auto;
+		}
+		p {
+			width: 80px;
+			margin-bottom: 0;
+			float: left;
+			font-size: 14px;
+		}
+		.layer {
+			margin-bottom: 5px;
+			float: left;
+			width: 980px;
+			li {
+				margin-bottom: 0;
+			}
+		}
+		span {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			font-size: 12px;
+			&:after {
+				content: "\2b";
+				font-family: 'Glyphicons Halflings';
+				font-size: 8px;
+				color: #666666;
+			}
+		}
+		span.style {
+			&:after {
+				content: "\2212";
+				font-family: 'Glyphicons Halflings';
+				font-size: 8px;
+				color: #666666;
+			}
+		}
+		&:last-child {
+			border-bottom:none;
+		}
+	}
+	.sort {
+		margin: 0;
+	}
+
+	.classification {
+		list-style: none;
+		li {
+			float: left;
+		}
+	}
+}
+

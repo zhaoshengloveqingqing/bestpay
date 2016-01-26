@@ -1,0 +1,29 @@
+[
+	{
+		"field": "id",
+		"label": "ID",
+		"state": "readonly",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "name",
+		"label": "Name",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"50" },
+			"required"
+		]
+	},
+	{
+		"field": "note",
+		"label": "Note",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"1024" },
+			"required"
+		]
+	}
+]

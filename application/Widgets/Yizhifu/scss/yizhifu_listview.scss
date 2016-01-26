@@ -1,0 +1,149 @@
+@mixin section_yizhifu_listview($args...) {
+	.listview_wrapper {
+		position: relative;
+		display: inline-table;
+		width: 100%;
+		padding-bottom: 10px;
+		%listview_select {
+			display: inline-table;
+			border: 1px solid #ebebeb;
+			border-radius: 2px;
+			&:foucs,
+			&:active {
+				outline: none;
+			}
+		}
+
+		.listview_length {
+			margin-left: 0;
+			label {
+				display: inline-table;
+				vertical-align: middle;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			label > select {
+				@extend %listview_select;
+			}
+		}
+
+		.listview_orderbox {
+			vertical-align: top;
+			border: 0;
+		}
+
+		.listview_orderbox_select {
+			@extend %listview_select;
+		}
+
+		.selectboxit-container {
+			span {
+				margin: 0;
+				height: res(75px, 35px);
+				line-height: res(75px, 35px);
+				border-radius: 2px;
+			}
+			.selectboxit {
+				width: 135px;
+				border: 1px solid #ebebeb;
+			}
+			.selectboxit-options {
+				a {
+					height: res(75px, 35px);
+					line-height: res(75px, 35px);
+				}
+			}
+			.selectboxit-list {
+				width: 10px !important;
+				border: 1px solid #ebebeb;
+			}
+		}
+		.listview_filter {
+			position: relative;
+			float: right;
+			margin-right: 10px;
+			input {
+				padding: 5px 10px;
+				margin-left: 10px;
+				border: 1px solid #ebebeb;
+				border-radius: 2px;
+			}
+			input:focus {
+				outline: none;
+			}
+		}
+		.listview_mask {
+		}
+
+		.listview_mask.show {
+		}
+
+		.listview_mask.hide {
+			background-color: transparent;
+		}
+		.listview_mask_loading {
+			display: none;
+		}
+		.listview {
+			.item {
+				.thumbnail {
+//					margin: 10px;
+				}
+				.thumbnail:hover {
+//					box-shadow: 0 0 4px 4px #ebebeb;
+				}
+			}
+			width: 100%;
+			padding: 0;
+			padding-top: 10px;
+			list-style: none;
+			display: inline-table;
+			position: relative;
+			> li {
+				display: inline-table;
+				width: 25%;
+				margin-right: 0;
+				height: auto;
+			}
+			> li picture {
+				display: inline-block;
+//				width: 240px;
+				width: 100%;
+			}
+			.listview_item_template {
+//				display: none;
+			}
+		}
+		.listview_pagination {
+			position: relative;
+			float: right;
+			margin-right: 0;
+			.paginate_button {
+				display: inline-block;
+				border-radius: 4px;
+			}
+		}
+	}
+}
+
+.listview_wrapper {
+	position: relative;
+}
+
+.listview.no-result {
+	overflow: visible;
+}
+
+.listview-no-result {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}

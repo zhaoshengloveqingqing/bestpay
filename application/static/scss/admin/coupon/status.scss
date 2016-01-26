@@ -1,0 +1,145 @@
+//#nav {
+//  background-color: #ebebeb;
+//  padding: 10px 40px;
+//  margin-bottom:40px;
+//  .nav-classify {
+//    > li:not(.nav-classify__title) {
+//      &:hover{
+//        border-bottom:none;
+//      }
+//    }
+//  }
+//}
+//.nav-sub {
+//  width: 100%;
+//  color: #444444;
+//  margin-bottom: 20px;
+//  font-size: 0;
+//  letter-spacing: -3px;
+//  > * {
+//    font-size: 12px;
+//    letter-spacing: normal;
+//  }
+//  > li {
+//    display: inline-block;
+//    float: none;
+//  }
+//  > li > a {
+//    color: #444444;
+//    border-radius: 0;
+//    padding-left: 30px;
+//    padding-right: 30px;
+//    &:hover,
+//    &:focus {
+//      // color: #ffffff;
+//      border-bottom: 2px solid #ff8400;
+//    }
+//  }
+//
+//  li + li {
+//    margin-left: 0;
+//  }
+//
+//  > li.active {
+//    > a {
+//      &,
+//      &:hover,
+//      &:focus {
+//        border-bottom: 2px solid #ff8400;
+//      }
+//    }
+//  }
+//}
+.container {
+	padding: 0;
+	.nav {
+		border-bottom: 3px solid #16af69;
+		> li {
+			width: 190px;
+		}
+		> li > a {
+			margin-right: 10px;
+			background-color: #f5f5f5;
+			border: 1px solid #a9a9a9;
+			border-bottom: 1px solid #16af69;
+			color: #444444;
+			cursor: pointer;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+			&:hover {
+				background-color: #16af69;
+				color: #ffffff;
+				border-color: transparent;
+			}
+		}
+		> li.active,
+		> li:nth-child(2) > a {
+			background-color: #16af69;
+			color: #ffffff;
+			border-color: transparent;
+		}
+	}
+}
+
+.container{
+	margin-bottom:180px;
+	margin-top: 50px;
+	h3{
+		font-weight: 500;
+	}
+	.clips-form {
+		margin:40px 0;
+		label {
+			padding-bottom: 10px;
+			font-weight: 200;
+		}
+		input {
+			height: 56px;
+			width: 490px;
+			box-shadow: #a1a1a1 1px 1px 0px 1px inset;
+			border-radius: 0;
+		}
+		.form-control:focus {
+			border-color: #cccccc !important;
+		}
+		.action {
+			margin-left: 0px;
+			width: 490px;
+		}
+		.btn {
+			display: block;
+			width: 180px;
+			height: 50px;
+			float: right;
+			margin-top: 10px;
+			background-color:#16af69;
+			box-shadow:none;
+			border-radius: 6px;
+			border:none;
+			&:hover,
+			&:focus,
+			&.focus {
+				color: #ffffff;
+				background-color: #008f3c;
+			}
+		}
+	}
+}
+
+
+
+@media \0screen {
+	.container {
+		width:1180px;
+		margin: 0 auto;
+		ul {
+			li {
+				a[title="Coupon Voucher Status"] {
+					background-color: #16af69;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

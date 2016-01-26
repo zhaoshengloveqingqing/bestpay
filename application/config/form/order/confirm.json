@@ -1,0 +1,179 @@
+[
+	{
+		"field": "bestpay",
+		"label": "",
+		"rules": [
+			{
+			"type": "radio"
+			}
+		]
+	},
+    {
+        "field": "id",
+        "rules": [
+            {
+                "type": "hidden"
+            }
+        ]
+    },
+	{
+		"field": "province",
+		"label": "Province"
+	},
+	{
+		"field": "city",
+		"label": "City",
+		"cascade_field": "province",
+		"cascade_model": "place"
+	},
+	{
+		"field": "area",
+		"label": "Area",
+		"cascade_field": "city",
+		"cascade_model": "place"
+	},
+    {
+        "field": "amount",
+        "label": "Purchase Number",
+        "state": "readonly",
+        "rules": [
+            {
+	            "minlength": 1,
+	            "maxlength": 32
+            }
+        ]
+    },
+	{
+		"field": "number",
+		"label": "Purchase Number",
+		"state": "readonly",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+    {
+        "field": "total_price",
+        "label": "Total Price",
+        "state": "readonly",
+        "rules": [
+            {
+	            "minlength": 1,
+	            "maxlength": 32
+            }
+        ]
+    },
+    {
+        "field": "price",
+        "label": "Purchase Price",
+        "state": "readonly",
+        "rules": [
+            {
+                "minlength": 1,
+                "maxlength": 32
+            }
+        ]
+    },
+	{
+		"field": "discount_price",
+		"label": "Discount Price",
+		"state": "readonly",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+    {
+        "field": "name",
+        "label": "Purchase Name",
+        "state": "readonly",
+        "rules": [
+            {
+	            "minlength": 1,
+	            "maxlength": 32
+            }
+        ]
+    },
+	{
+		"field": "delivery_address",
+		"label": "Delivery Address",
+		"rules": [
+			{
+				"type": "string",
+				"minlength": 1,
+				"maxlength": 280
+			},
+			"required"
+		]
+	},
+	{
+		"field": "postcode",
+		"label": "PostCode"
+	},
+	{
+		"field": "first_name",
+		"label": "First Name"
+	},
+	{
+	"field": "phone",
+	"label": "Phone"
+	},
+	{
+		"field": "default_address",
+		"label": "Default Address"
+	},
+    {
+        "field": "payment_id",
+        "rules": [
+            {
+	            "min": 1
+            }
+        ]
+    },
+	{
+		"field": "distribution_way",
+		"label": "Distribution Way"
+	},
+	{
+		"field": "coupon",
+		"label": ""
+	},
+    {
+        "field": "totalPrice",
+        "label": "Total",
+        "state": "readonly",
+        "rules": [
+            {
+	            "minlength": 1,
+	            "maxlength": 32
+            }
+        ]
+    },
+	{
+		"field": "consignee",
+		"label": "Consignee",
+		"rules": [
+			{
+
+			},
+			"required"
+		]
+
+	}
+,
+	{
+		"field": "mobile",
+		"label": "Mobile",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 11
+			},
+			"required"
+		]
+	}
+]

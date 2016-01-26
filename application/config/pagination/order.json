@@ -1,0 +1,19 @@
+{
+	"from": "orders",
+	"columns": [
+		{ "data":"orders.id", "action":"order/show", "title":"ID" },
+		{ "data":"orders.uid", "title":"Owner", "action":"user/show", "refer":"users.id" },
+		{ "data":"orders.name", "title":"Name" },
+		{ "data":"orders.order_number", "title":"Serial" },
+		{ "data":"orders.note", "title":"Note" },
+		{ "data":"orders.status", "title":"Status" },
+		{ "data":"orders.payment_id", "title":"Payment Mehtod", "action":"payment_method/show", "refer":"payment_methods.id" },
+		{ "data":"orders.create_date", "title":"Create Date" },
+		{ "data":"orders.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["users", {"orders.uid":"users.id"}]
+	,
+		["payment_methods", {"orders.payment_id":"payment_methods.id"}]
+	]
+}

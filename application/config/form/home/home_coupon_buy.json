@@ -1,0 +1,25 @@
+[
+	{
+		"field": "name",
+		"label": "Coupon_Name",
+		"rules": [
+			{
+			"type": "string",
+			"minlength": 6,
+			"maxlength": 32
+			}, 
+			"required"
+		]
+	},
+	{
+		"field": "price",
+		"label": "Coupon_Price",
+		"rules": [
+			{
+			"minlength": 6,
+			"maxlength": 32
+			}, 
+			"required"
+		]
+	}
+]

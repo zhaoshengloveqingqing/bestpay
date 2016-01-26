@@ -1,0 +1,10 @@
+{
+	"from": "users",
+	"columns": [
+		{ "data":"users.id", "action":"user/show", "title":"ID" },
+		{ "data":"users.status", "title":"Status" },
+		{ "data":"users.create_date", "title":"Create Date" },
+		{ "data":"users.timestamp", "title":"Modify Date" }
+	],
+	"join": []
+}

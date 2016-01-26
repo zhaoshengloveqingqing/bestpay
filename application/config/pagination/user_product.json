@@ -1,0 +1,15 @@
+{
+    "from": "products",
+    "columns": [
+        { "data": "users.id", "title" : "User ID", "action":"user/show", "toggle": true},
+        { "data": "products.name", "title" : "Product Name"},
+        { "data": "products.price", "title" : "Product Price"},
+        { "data": "products.note", "title" : "Product Note"}
+    ],
+    "join": [
+        ["customer_products",{"customer_products.product_id":"products.id"}],
+        ["customers",{"customers.id":"customer_products.cid"}],
+        ["users",{"users.id":"customers.uid"}]
+    ],
+    "pageLength" : 9
+}

@@ -1,0 +1,22 @@
+[
+	{
+		"field": "reason",
+		"label": "select the cancel reason"
+	},
+	{
+		"field": "id",
+		"label": "ID"
+	},
+	{
+		"field": "instruction",
+		"label": "Instruction"
+	},
+	{
+		"field": "uid",
+		"rules": [
+			{
+				"type": "hidden"
+			}
+		]
+	}
+]

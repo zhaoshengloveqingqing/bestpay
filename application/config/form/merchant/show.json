@@ -1,0 +1,57 @@
+[
+    {
+        "field": "name",
+        "label": "Name",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ]
+    },
+    {
+        "field": "logo_url",
+        "label": "Logo Url",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ]
+    },
+    {
+        "field": "description",
+        "label": "Description",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ]
+    },
+    {
+        "field": "location",
+        "label": "Location",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ]
+    },
+    {
+        "field": "logo_url",
+        "label": "Logo Url",
+        "rules": [
+            {
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "required"
+        ]
+    }
+]

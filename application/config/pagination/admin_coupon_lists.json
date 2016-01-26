@@ -1,0 +1,21 @@
+{
+	"from": "products",
+	"columns": [
+		{ "data": "customer_products.code", "title" : "Code"},
+		{ "data": "products.name", "title" : "Coupon Name", "refer" : "customer_products.id", "action" : ""},
+		{ "data": "products.discount_price", "title" : "Price"},
+		{ "data": "customer_products.timestamp", "title" : "Consumption time"},
+		{ "data": "customers.name", "title" : "Username"}
+	],
+	"join": [
+		["customer_products", {"products.id" : "customer_products.product_id"}],
+        ["customers", {"customer_products.cid" : "customers.id"}],
+        ["merchant_products", {"merchant_products.product_id" : "products.id"}]
+	],
+	"where": {"customer_products.status" : "USED"},
+	"groupBy": "customer_products_code",
+	"orderby": "customer_products.timestamp desc",
+	"lengthChange": false,
+	"searching": false,
+	"bundle": "coupon"
+}

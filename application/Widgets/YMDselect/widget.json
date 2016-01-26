@@ -1,0 +1,17 @@
+{
+	"author": "andy",
+	"date": "Fri Feb 27 13:31:44 2015",
+	"version": "1.0",
+	"name": "YMDselect",
+	"doc":"YMDselect",
+	"js": {
+		"files": [
+			"YMDClass"
+		]
+	},
+    "scss": {
+        "files": [
+
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+	"%server_action": {
+		"type": "server",
+		"$type": "Clips\\SimpleAction"
+	},
+	"%action": {
+		"type": "client",
+		"$type": "Clips\\SimpleAction",
+		"content": "alert('Not Implemented yet!')"
+	},
+	"home": {
+		"$template": "%server_action",
+		"label": "Home Page",
+		"type": "server",
+		"content": "/"
+	},
+	"choice": {
+		"$template": "%action",
+		"label": "Group Purchase Choice"
+	},
+	"push": {
+		"$template": "%action",
+		"label": "Boutique Push"
+	},
+	"coupon": {
+		"$template": "%server_action",
+		"label": "Products",
+		"content": "product"
+	},
+	"app": {
+		"$template": "%action",
+		"label": "BestPay Application"
+	},
+	"service": {
+		"$template": "%action",
+		"label": "Life Service"
+	},
+	"help": {
+		"$template": "%action",
+		"label": "Help Center"
+	},
+	"cart": {
+		"$template": "%action",
+		"label": "Shopping Cart"
+	}
+}

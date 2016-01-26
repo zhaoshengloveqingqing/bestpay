@@ -1,0 +1,20 @@
+{
+	"from": "merchants",
+	"columns": [
+		{ "data":"merchants.id", "action":"merchant/show", "title":"ID" },
+		{ "data":"merchants.uid", "title":"User ID", "action":"user/show", "refer":"users.id" },
+		{ "data":"merchants.name", "title":"Name" },
+		{ "data":"merchants.status", "title":"Status" },
+		{ "data":"merchants.is_main_store", "title":"Main Store" },
+		{ "data":"merchants.logo_url", "title":"Logo" },
+		{ "data":"merchants.description", "title":"Description" },
+		{ "data":"merchants.location", "title":"Location" },
+		{ "data":"merchants.longitude", "title":"Longitude" },
+		{ "data":"merchants.latitude", "title":"Latitude" },
+		{ "data":"merchants.create_date", "title":"Create Date" },
+		{ "data":"merchants.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["users", {"merchants.uid":"users.id"}]
+	]
+}

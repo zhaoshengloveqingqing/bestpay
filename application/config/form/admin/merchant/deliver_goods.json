@@ -1,0 +1,44 @@
+[
+	{
+		"field": "order_id",
+		"label": "Order ID",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+	{
+		"field": "id",
+		"label": "ID",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			}
+		]
+	},
+	{
+		"field": "distribution_company",
+		"label": "Company/courier",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 32
+			},
+			"required"
+		]
+	},
+	{
+		"field": "distribution_phone",
+		"label": "Phone/courier number",
+		"rules": [
+			{
+				"minlength": 1,
+				"maxlength": 11
+			},
+			"required"
+		]
+	}
+]

@@ -1,0 +1,67 @@
+#main-content {
+	@include center(1180px);
+	padding: 0 !important;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	.row {
+		margin: 0px;
+	}
+	.place {
+		padding-left: 15px;
+		.pinet-breadcrumb {
+			padding: 0;
+			li {
+				width: auto;
+				&.active {
+					color: #202121;
+					font-weight: 500;
+				}
+			}
+			a {
+				color: #444444;
+			}
+			> li + li:before {
+				color: #444444;
+				font-family: 'Glyphicons Halflings';
+				font-style: normal;
+				width: 18px;
+				height: 18px;
+				background: url(php_static_url("/application/static/img/cart/icon2.png")) no-repeat;
+				content: "";
+				display: inline-block;
+				position: relative;
+				top:4px;
+			}
+		}
+	}
+	.content {
+		padding: 220px 400px 190px;
+		text-align: center;
+		background: url(php_static_url("/application/static/img/cart/shopping_bg.png")) no-repeat 650px center;
+		p {
+			text-align: left;
+			font-size: 18px;
+			color: #444444;
+			line-height: 30px;
+			letter-spacing:1px;
+			margin-top: 15px;
+		}
+		.btn {
+			background-color: #1cb26d;
+			border: none;
+			padding: 8px 15px;
+			color: #ffffff;
+			letter-spacing:1px;
+			font-size: 16px;
+			line-height: 31px;
+			img {
+				margin-left: 10px;
+			}
+		}
+		.btn:hover,
+		.btn:focus {
+			border: none;
+		}
+	}
+
+}

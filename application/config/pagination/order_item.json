@@ -1,0 +1,20 @@
+{
+	"from": "order_items",
+	"columns": [
+		{ "data":"order_items.id", "action":"order_item/show", "title":"ID" },
+		{ "data":"order_items.order_id", "title":"Order", "action":"order/show", "refer":"orders.id" },
+		{ "data":"order_items.uid", "title":"Owner", "action":"user/show", "refer":"users.id" },
+		{ "data":"products.name", "title":"Product", "action":"product/show", "refer":"products.id" },
+		{ "data":"order_items.amount", "title":"Amount" },
+		{ "data":"order_items.price", "title":"Price" },
+		{ "data":"order_items.create_date", "title":"Create Date" },
+		{ "data":"order_items.timestamp", "title":"Modify Date" }
+	],
+	"join": [
+		["orders", {"order_items.order_id":"orders.id"}]
+	,
+		["users", {"order_items.uid":"users.id"}]
+	,
+		["products", {"order_items.product_id":"products.id"}]
+	]
+}

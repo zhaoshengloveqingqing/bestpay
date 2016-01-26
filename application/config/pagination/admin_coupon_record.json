@@ -1,0 +1,17 @@
+{
+	"from": "merchant_products",
+	"columns": [
+		{ "data": "products.name", "title" : "Product Name", "refer" : "products.id", "action" : "admin/coupon/lists?group_purchase="},
+		{ "data": "count(distinct customer_products.id) as zcount", "title" : "Amount", "searchable": false}
+	],
+	"join": [
+		["products", {"merchant_products.product_id" : "products.id"}],
+		["customer_products", {"products.id" : "customer_products.product_id"}]
+	],
+	"where": {"customer_products.status" : "USED"},
+	"groupBy": ["products.id"],
+	"lengthChange": false,
+	"searching": false,
+	"bundle": "coupon",
+	"orderBy": ["products.id"]
+}

@@ -1,0 +1,25 @@
+[
+	{
+		"field": "username",
+		"label": "Username",
+		"rules": [
+			{
+			"type": "string",
+			"minlength": 6,
+			"maxlength": 32
+			},
+			"required"
+		]
+	},
+	{
+		"field": "password",
+		"label": "Password",
+		"rules": [
+			{
+			"minlength": 6,
+			"maxlength": 32
+			},
+			"required"
+		]
+	}
+]

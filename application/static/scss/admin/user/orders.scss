@@ -1,0 +1,185 @@
+#main-content {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	.row {
+		margin: 0;
+		&#menu {
+			margin-bottom: 20px;
+		}
+	}
+}
+.panel {
+	padding: 0;
+	box-shadow: none;
+	width: 68%;
+	margin: 0 auto;
+	.modal {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin-top: 200px;
+		z-index: 1050;
+		display: none;
+		overflow: hidden;
+		.modal-dialog{
+			width: 450px;
+		}
+		.modal-body {
+			h2 {
+				margin-top: 10px;
+			}
+			p {
+				font-size: 14px;
+			}
+			.btn {
+				display: inline-block;
+				background-color:#444444;
+				border:none;
+				color: #ffffff;
+				padding:10px 30px;
+				border-radius:2px;
+				margin-right: 20px;
+				&:hover {
+					background-color:#777777;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+.pinet-list-group {
+	margin: 0;
+	width: 100%;
+	display: table;
+	vertical-align: top;
+	& > &__title {
+		display: table-row;
+		width: 100%;
+	}
+	& > &__item {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+.nav-stacked > li {
+	font-size: 16px;
+	&.active {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+}
+.nav-pills > li > a {
+	color: #444444;
+	padding: 6px 10px;
+
+}
+.nav-pills > li > a:hover,.nav-pills > li > a:active {
+	background-color: transparent;
+	text-decoration: underline;
+}
+%pinet-card-child {
+	display: inline-table;
+	vertical-align: top;
+}
+.pinet-card {
+	& > &__media {
+		@extend %pinet-card-child;
+		div {
+			img {
+				display: inline-block;
+				width:120px;
+			}
+		}
+	}
+	& > &__body {
+		@extend %pinet-card-child;
+	}
+}
+.listview_title {
+	border-bottom: 1px solid #dddddd;
+	padding:12px 0;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+#mycoupon,#mycoupon_title {
+
+	.item.edge {
+		margin: 10px 0;
+		.pinet-list-group {
+			margin: 5px 0px;
+		}
+	}
+	.pinet-list-group {
+		padding-left: 0;
+		display: table;
+		.pinet-list-group__item {
+			text-align: center;
+			h3 {
+				margin-top: 0;
+				font-size:16px;
+			}
+		}
+		.pinet-list-group__item--picture {
+			width: 20%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--info {
+			width: 35%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--number {
+			width: 10%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--price {
+			width: 10%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--status {
+			width: 15%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.pinet-list-group__item--do {
+			width: 10%;
+			display: table-cell;
+			vertical-align: middle;
+			a {
+				cursor: pointer;
+			}
+		}
+	}
+
+	> .item {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+.pinet-card__media {
+	width: 100%;
+	max-width: 120px;
+}
+.clips-listview {
+	.edge {
+		border-bottom: 1px dotted #ebebeb;
+		p {
+			font-size: 14px;
+		}
+	}
+}
+.listview_wrapper {
+	.listview_toolbar {
+		margin: 10px 0;
+	}
+}
+
+
+

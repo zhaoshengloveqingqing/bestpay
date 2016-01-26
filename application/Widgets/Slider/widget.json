@@ -1,0 +1,17 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 16:15:58 2015",
+	"version": "1.0",
+	"name": "demo.slider",
+	"doc":"Slider widget",
+	"js": {
+		"files": [
+			"jssor.slider.mini"
+		]
+	},
+	"scss": {
+		"files": [
+			"pinet_slider"
+		]
+	}
+}
